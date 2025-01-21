@@ -1,18 +1,66 @@
 <template>
     <div class="bg-white text-gray-900 min-h-screen">
       <!-- Header -->
-      <header class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-white shadow-md">
-        <div class="text-xl font-bold uppercase text-[#124E66]">Janne Andersson</div>
-        <nav class="flex space-x-6 items-center">
-          <a href="#about" class="hover:underline text-gray-700">Om Janne</a>
-          <a href="#föreläsningar" class="hover:underline text-gray-700">Föreläsningar</a>
-          <a href="#uppdrag" class="hover:underline text-gray-700">Uppdrag och produktioner</a>
-          <a href="#contact" class="hover:underline text-gray-700 border py-1 px-2 border-[#124E66] hover:bg-[#124E66] hover:text-white rounded">Kontakt</a>
-        </nav>
-      </header>
+      <header class="absolute top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="flex justify-between items-center px-6 py-4">
+      <!-- Logo -->
+      <div class="text-xl font-bold uppercase text-[#124E66]">Janne Andersson</div>
+      <!-- Hamburger Icon -->
+      <button
+        @click="toggleMenu"
+        class="block md:hidden text-[#124E66] focus:outline-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#about" class="hover:underline text-gray-700">Om Janne</a>
+        <a href="#föreläsningar" class="hover:underline text-gray-700">Föreläsningar</a>
+        <a href="#uppdrag" class="hover:underline text-gray-700">Uppdrag</a>
+        <a
+          href="#contact"
+          class="hover:underline text-gray-700 border py-1 px-2 border-[#124E66] hover:bg-[#124E66] hover:text-white rounded"
+        >
+          Kontakt
+        </a>
+      </nav>
+    </div>
+    <!-- Mobile Navigation -->
+    <nav
+      v-show="menuOpen"
+      class="md:hidden bg-white shadow-md border-t border-gray-200"
+    >
+      <ul class="flex flex-col space-y-4 py-4 px-6">
+        <li><a href="#about" class="hover:underline text-gray-700">Om Janne</a></li>
+        <li><a href="#föreläsningar" class="hover:underline text-gray-700">Föreläsningar</a></li>
+        <li><a href="#uppdrag" class="hover:underline text-gray-700">Uppdrag</a></li>
+        <li>
+          <a
+            href="#contact"
+            class="hover:underline text-gray-700 border py-2 px-4 border-[#124E66] hover:bg-[#124E66] hover:text-white rounded"
+          >
+            Kontakt
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   
       <!-- Hero Section -->
-      <section class="flex flex-col lg:flex-row items-center justify-around text-center lg:text-left px-6 lg:px-24 py-20 bg-gray-100">
+      <section class="flex flex-col lg:flex-row items-center justify-around text-center mt: lg:text-left px-6 lg:px-24 py-20 bg-gray-100">
         <div class="max-w-lg">
           <h1 class="text-5xl font-bold text-gray-900 leading-tight">
             Janne Andersson
@@ -395,6 +443,16 @@
   <script>
   export default {
     name: "LandingPage",
+    data() {
+    return {
+      menuOpen: false, // Tracks if the menu is open
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen; // Toggles the menu state
+    },
+  },
     
   };
   </script>
