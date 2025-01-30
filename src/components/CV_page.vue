@@ -387,7 +387,7 @@
               uefaProTitle: "UEFA Pro License",
               uefaProDate: "2008 – 2010",
               uniTitle: "University of Sport education",
-              uniDate: "1968 – 1971",
+              uniDate: "1984 – 1986",
             },
   
             bookSectionTitle: "Min bok",
