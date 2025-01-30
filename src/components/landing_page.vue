@@ -420,7 +420,7 @@
           </div>
 
           <!-- CTA Button -->
-          <div class="flex justify-center lg:justify-end w-1/4">
+          <div class="flex justify-center lg:justify-end md:w-1/4 w-1/2">
             <a
               href="#contact"
               class="px-4 flex items-center w-3/4 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200"
