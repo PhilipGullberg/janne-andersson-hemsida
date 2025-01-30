@@ -10,9 +10,7 @@ export default {
 </script>
 
 <template>
-  <div id="app">
-    <landing_page />
-  </div>
+    <router-view></router-view>
 </template>
 
 <style scoped>
