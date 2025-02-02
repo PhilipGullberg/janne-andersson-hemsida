@@ -8,12 +8,12 @@
         <!-- Left side logo and CV button -->
         <div class="flex items-center gap-6">
           <div class="text-xl font-bold uppercase text-[#124E66] md:hidden lg:block">
-            {{ currentText.headerName }}
+            <a href="/">{{ currentText.headerName }}</a>
           </div>
           <button
             class="flex items-center hidden md:flex px-2 py-1 border border-[#124E66] rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
           >
-            <router-link to="/cv">
+            <router-link to="/cv" @click.native="scrollToTop()">
               {{ currentText.headerCV }} 
               <i class="fa-solid fa-file text-[#124E66] ms-3 fa-sm"></i>
             </router-link>
@@ -75,10 +75,12 @@
           <a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a>
           <a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a>
           <a
+            @click="toggleMenu()"
             href="#contact"
             class="hover:underline text-gray-700 border py-1 px-2 border-[#124E66] hover:bg-[#124E66] hover:text-white rounded"
           >
             {{ currentText.navContact }}
+            
           </a>
         </nav>
       </div>
@@ -119,7 +121,7 @@
           <button
             class="flex items-center w-20 px-2 py-1 border border-[#124E66] rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
           >
-            <router-link to="/cv">
+            <router-link to="/cv" @click.native="scrollToTop()">
               {{ currentText.headerCV }}
               <i class="fa-solid fa-file text-[#124E66] ms-3 fa-sm"></i>
             </router-link>
@@ -130,41 +132,42 @@
           <li><a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a></li>
           <li><a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a></li>
           <li>
-            <a
+            <a @click="toggleMenu()"
               href="#contact"
               class="hover:underline text-gray-700 border py-2 px-4 border-[#124E66] hover:bg-[#124E66] hover:text-white rounded"
             >
               {{ currentText.navContact }}
+              
             </a>
           </li>
         </ul>
       </nav>
     </header>
-
-    <!-- MAIN CONTENT (the large template you had) -->
     <main v-if="currentPage === 'main'" class="animate-fade-in">
 
       <!-- Hero Section -->
-      <section class="flex flex-col md:flex-row items-center justify-around text-center mt: lg:text-left px-6 lg:px-24 py-20 bg-gray-100">
-        <div class="max-w-lg">
+      <section  class="flex flex-col md:flex-row items-center justify-around text-center mt: lg:text-left px-6 lg:px-24 py-20 bg-gray-100">
+        <div class="lg:max-w-lg max-w-md" >
           <h1 class="text-5xl font-bold text-gray-900 leading-tight">
             {{ currentText.heroTitle }}
           </h1>
-          <p class="mt-4 text-lg text-gray-700">
+          <p class="mt-4 text-lg leading-relaxed text-gray-700">
             {{ currentText.heroDescription }}
           </p>
           <a
+          @click="toggleMenu()"
             href="#contact"
-            class="mt-6 inline-block px-6 py-3 bg-[#124E66] text-white font-semibold rounded-full hover:bg-[#0f3d52]"
+            class="mt-8 inline-block px-6 py-3 bg-[#124E66] text-lg text-white font-semibold rounded-full hover:bg-[#0f3d52] hover:scale-105 transform transition duration-300"
           >
-            {{ currentText.heroCta }}
+            {{ currentText.heroCta }} <i class="fa-solid fa-arrow-right fa-sm ms-3 self-center"></i>
+            
           </a>
         </div>
-        <div class="ms-10 mt-10 lg:mt-0 lg:max-w-md">
+        <div class="mt-10 lg:mt-4 md:ms-4 lg:max-w-md">
           <img
             src="https://www.cafe.se/app/uploads/2021/05/dd97e726-cafe_janne1337-1.jpg"
             alt="Placeholder for Hero"
-            class="rounded-lg shadow-md"
+            class="rounded-md shadow-lg object-cover w-[400px] h-[500px]"
           />
         </div>
       </section>
@@ -246,6 +249,7 @@
               {{ currentText.lectureParagraph2 }}
             </p>
             <a
+            @click="toggleMenu()"
               href="#contact"
               class="mt-6 inline-block px-6 py-3 bg-[#124E66] text-white font-semibold rounded-full hover:bg-[#0f3d52]"
             >
@@ -420,8 +424,9 @@
           </div>
 
           <!-- CTA Button -->
-          <div class="flex justify-center lg:justify-end md:w-1/4 w-1/2">
+          <div class="flex justify-center lg:justify-end lg:w-2/5 md:w-3/5 w-3/4">
             <a
+             @click="toggleMenu()"
               href="#contact"
               class="px-4 flex items-center w-3/4 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200"
             >
@@ -449,7 +454,7 @@
       <section id="utmärkelser">
         <h1 class="text-4xl font-bold text-gray-900 text-center mb-10 mt-16">
           {{ currentText.awardsTitle }}
-        </h1><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-16">
+        </h1><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-16 px-6">
       <div
         v-for="(award, index) in currentText.majorAwards"
         :key="index"
@@ -469,7 +474,7 @@
     </div>
 
     <!-- Minor Awards (Icon-based) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-16 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 md:px-16 px-6">
       <div
         v-for="(award, index) in currentText.minorAwards"
         :key="index"
@@ -1028,12 +1033,14 @@ export default {
   },
 
   methods: {
+    scrollToTop() {
+    window.scrollTo(0,0);
+  },
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
     },
 
     changeLanguage(lang) {
-      // triggers the setter for currentLanguage => updates the store
       this.currentLanguage = lang;
     },
 

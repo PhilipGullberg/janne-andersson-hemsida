@@ -1,10 +1,10 @@
 <template>
-    <header class="absolute top-0 left-0 w-full bg-white shadow-md z-50">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div class="flex justify-between items-center px-10 py-4">
         <!-- Logo -->
         <div class="flex items-center gap-6">
           <div class="text-xl font-bold uppercase text-[#124E66] md:hidden lg:block">
-            {{ currentText.headerName }}
+           <a href="/"> {{ currentText.headerName }}</a>
           </div>
           <button
             class="flex items-center px-2 py-1 hidden mb:flex border border-[#124E66] rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
@@ -112,7 +112,7 @@
                 <i class="fa-solid fa-file text-[#124E66] ms-3 fa-sm"></i>
               </router-link>
             </button>
-          <router-link to="/" class="hover:underline text-gray-700 border  border-[#124E66] rounded w-12 px-1">
+          <router-link to="/" class="hover:underline text-gray-700 border  border-[#124E66] rounded w-16 px-2">
             {{ currentText.navHome }}
           </router-link>
         </ul>
@@ -336,12 +336,12 @@
   
   <script>
   import { languageStore } from "../store/languageStore.js";
+  
   export default {
     name: "CVPage",
     data() {
       return {
         menuOpen: false,
-        currentLanguage: "sv",
   
         textContent: {
           sv: {
