@@ -3,7 +3,7 @@
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div class="flex justify-between items-center px-10 py-4">
+      <div class="flex justify-between items-center px-10 py-2">
         
         <!-- Left side logo and CV button -->
         <div class="flex items-center gap-6">
@@ -451,7 +451,7 @@
       </div>
 
       <!-- Awards Section -->
-      <section id="utmärkelser">
+      <section id="utmärkelser" class="py-4">
         <h1 class="text-4xl font-bold text-gray-900 text-center mb-10 mt-16">
           {{ currentText.awardsTitle }}
         </h1><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-16 px-6">
