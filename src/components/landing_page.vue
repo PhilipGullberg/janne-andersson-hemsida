@@ -351,7 +351,7 @@
         
       </blockquote>
       <a target="_blank"
-            class="px-4 flex items-center w-1/3 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200 mt-8" href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302">{{ currentText.bookSection.CTA }}</a>
+            class="px-4 flex items-center w-2/3 md:w-1/3 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200 mt-8" href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302">{{ currentText.bookSection.CTA }}</a>
     </div>
   </div>
 </section>
