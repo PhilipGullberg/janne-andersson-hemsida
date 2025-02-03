@@ -217,7 +217,7 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="py-16 px-6 lg:px-24 bg-gray-100">
+      <section id="about" class="pt-16 pb-8 px-6 lg:px-24 bg-gray-100">
         <div class="max-w-5xl mx-auto text-center">
           <h2 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.aboutTitle }}
@@ -394,13 +394,14 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             <!-- Card 1 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300  overflow-hidden">
-              <div class="aspect-w-16 aspect-h-9 h-96">
+              <div class="aspect-w-16 aspect-h-9 h-96 overflow-hidden ">
                 <iframe
                   src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7288187782546493440"
                   frameborder="0"
+                  
                   allowfullscreen
                   title="Inbäddat inlägg"
-                  class="w-full h-full"
+                  class="w-full h-full overflow-hidden"
                 ></iframe>
               </div>
             </div>
@@ -411,6 +412,7 @@
                 <iframe
                   src="https://www.linkedin.com/embed/feed/update/urn:li:share:7285659427091746817"
                   frameborder="0"
+                  
                   allowfullscreen
                   title="Inbäddat inlägg"
                   class="w-full h-full"
@@ -425,6 +427,7 @@
                   src="https://www.linkedin.com/embed/feed/update/urn:li:share:7285541759995027456"
                   frameborder="0"
                   allowfullscreen
+                  
                   title="Inbäddat inlägg"
                   class="w-full h-full"
                 ></iframe>
