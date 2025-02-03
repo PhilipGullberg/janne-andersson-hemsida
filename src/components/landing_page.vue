@@ -11,11 +11,11 @@
             <a href="/">{{ currentText.headerName }}</a>
           </div>
           <button
-            class="flex items-center hidden md:flex px-2 py-1 border border-[#124E66] rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
+            class="flex items-center hidden md:flex px-2 py-1 border border-[#124E66] rounded-full hover:bg-gray-200 transition duration-300"
           >
             <router-link to="/cv" @click.native="scrollToTop()">
               {{ currentText.headerCV }} 
-              <i class="fa-solid fa-file text-[#124E66] ms-3 fa-sm"></i>
+              <i class="fa-solid fa-file text-[#124E66] ms-1 fa-sm"></i>
             </router-link>
           </button>
         </div>
@@ -119,11 +119,11 @@
 
           <!-- CV button mobile -->
           <button
-            class="flex items-center w-20 px-2 py-1 border border-[#124E66] rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
+            class="flex items-center w-20 px-2 py-1 border border-[#124E66] rounded-full  hover:bg-gray-200 transition duration-300"
           >
             <router-link to="/cv" @click.native="scrollToTop()">
               {{ currentText.headerCV }}
-              <i class="fa-solid fa-file text-[#124E66] ms-3 fa-sm"></i>
+              <i class="fa-solid fa-file text-[#124E66] ms-1 fa-sm"></i>
             </router-link>
           </button>
 
@@ -167,7 +167,7 @@
           <img
             src="https://www.cafe.se/app/uploads/2021/05/dd97e726-cafe_janne1337-1.jpg"
             alt="Placeholder for Hero"
-            class="rounded-md shadow-lg object-cover w-[400px] h-[500px]"
+            class="rounded-lg shadow-lg object-cover w-[400px] h-[500px]"
           />
         </div>
       </section>
@@ -233,6 +233,28 @@
           </p>
         </div>
       </section>
+      <section id="education" class="py-4 pb-16 px-6 lg:px-24 bg-gray-100">
+  <div class="max-w-5xl mx-auto text-center">
+    <!-- <h2 class="text-3xl font-bold text-gray-900 mb-8">
+      {{ currentLanguage === 'sv' ? 'Utbildningar' : 'Education' }}
+    </h2> -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div
+        v-for="education in currentText.educations"
+        :key="education.id"
+        class="flex flex-col items-center bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300"
+      >
+        <!-- Ikon, storlek och färg kan justeras -->
+        <div class="text-4xl text-[#124E66]">
+          <i :class="education.iconClass"></i>
+        </div>
+        <p class="mt-4 text-lg text-gray-700 text-center">
+          {{ education.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- Lectures Section -->
       <section class="bg-white-100 py-10 px-8 lg:px-32" id="föreläsningar">
@@ -304,6 +326,35 @@
           </div>
         </div>
       </section>
+
+      <section id="book" class="py-16 px-6 lg:px-24 bg-gradient-to-r from-[#124E66] to-[#124E66] text-white md:px-12 ">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    <!-- Bokbild -->
+    <div class="md:w-1/2 sm:w-full self-center">
+      <img
+        src="https://bilder.akademibokhandeln.se/images_akb/9789171265302_383/att-bygga-ett-lag"
+        alt="Bokens omslag"
+        class="rounded-lg shadow-2xl object-cover md:w-3/4 sm:w-3/5"
+      />
+    </div>
+    <!-- Textinnehåll -->
+    <div class="md:w-1/2 sm:w-full">
+      <h2 class="text-4xl font-extrabold mb-4">
+        {{ currentText.bookSection.title }}
+      </h2>
+      <p class="text-lg mb-6">
+        {{ currentText.bookSection.description }}
+        
+      </p>
+      <blockquote class="border-l-4 border-white pl-4 italic text-xl">
+        "{{ currentText.bookSection.quote }}"
+        
+      </blockquote>
+      <a target="_blank"
+            class="px-4 flex items-center w-1/3 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200 mt-8" href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302">{{ currentText.bookSection.CTA }}</a>
+    </div>
+  </div>
+</section>
 
       <!-- LinkedIn Section -->
       <section class="bg-gray-50 py-16 px-6 lg:px-8">
@@ -385,7 +436,7 @@
       </section>
 
       <!-- Assignments Section -->
-      <section class="bg-gray-50 py-16 px-6 lg:px-24" id="uppdrag">
+      <section class=" py-16 px-6 lg:px-24 bg-gray-100" id="uppdrag">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">
             {{ currentText.assignmentsTitle }}
@@ -581,6 +632,30 @@ export default {
       // All text for Swedish and English
       textContent: {
         sv: {
+          educations: [
+      {
+        id: 1,
+        title: "UEFA Pro License",
+        iconClass: "fas fa-trophy"  // Exempel på ikon, byt vid behov
+      },
+      {
+        id: 2,
+        title: "Certifierad från Styrelseakademien",
+        iconClass: "fas fa-university"
+      },
+      {
+        id: 3,
+        title: "Idrottsvetenskaplig utbildning",
+        iconClass: "fas fa-chalkboard-teacher"
+      }
+    ],
+          bookSection: {
+          title: "En handbok för ledare",
+          description: "Denna bok ger en djupgående inblick i ledarskap med inspirerande berättelser och praktiska exempel. Varje kapitel är utformat för att vara både informativt och engagerande.",
+          quote: "En bok som alla som jobbar med någon form av ledarskap bör läsa. En handbok i hur man får människor att trivas och prestera.",
+          image: "https://via.placeholder.com/400x600.png?text=Bokens+Omslag",
+          CTA:"Köp boken",
+        },
           awardsTitle: "Utmärkelser",
           title: "Uppdrag och Produktioner",
           readMore: "Läs mer",
@@ -787,6 +862,30 @@ export default {
         },
 
         en: {
+          educations: [
+      {
+        id: 1,
+        title: "UEFA Pro License",
+        iconClass: "fas fa-trophy"
+      },
+      {
+        id: 2,
+        title: "Certified by the Board Academy",
+        iconClass: "fas fa-university"
+      },
+      {
+        id: 3,
+        title: "Sports Science education",
+        iconClass: "fas fa-chalkboard-teacher"
+      }
+    ],
+          bookSection: {
+        title: "A handbook for leadarship",
+        description: "This book offers an in-depth look at leadership with inspiring stories and practical examples. Each chapter is designed to be both informative and engaging.",
+        quote: "A book that everyone who works with any form of leadership should read. A handbook on how to make people thrive and perform.",
+        image: "https://via.placeholder.com/400x600.png?text=Book+Cover",
+        CTA:"Buy the book",
+      },
           awardsTitle: "Awards",
           title: "Assignments and Productions",
           readMore: "Read more",
