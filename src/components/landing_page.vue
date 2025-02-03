@@ -75,7 +75,6 @@
           <a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a>
           <a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a>
           <a
-            @click="toggleMenu()"
             href="#contact"
             class="hover:underline text-gray-700 border py-1 px-2 border-[#124E66] hover:bg-[#124E66] hover:text-white rounded"
           >
@@ -155,7 +154,7 @@
             {{ currentText.heroDescription }}
           </p>
           <a
-          @click="toggleMenu()"
+          
             href="#contact"
             class="mt-8 inline-block px-6 py-3 bg-[#124E66] text-lg text-white font-semibold rounded-full hover:bg-[#0f3d52] hover:scale-105 transform transition duration-300"
           >
@@ -271,7 +270,7 @@
               {{ currentText.lectureParagraph2 }}
             </p>
             <a
-            @click="toggleMenu()"
+           
               href="#contact"
               class="mt-6 inline-block px-6 py-3 bg-[#124E66] text-white font-semibold rounded-full hover:bg-[#0f3d52]"
             >
@@ -391,16 +390,17 @@
             </svg>
             {{ currentText.linkedInButton }}
           </a>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
             <!-- Card 1 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300  overflow-hidden">
-              <div class="aspect-w-16 aspect-h-9 h-96 overflow-hidden ">
+              <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px] overflow-hidden ">
                 <iframe
                   src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7288187782546493440"
                   frameborder="0"
                   
                   allowfullscreen
                   title="Inbäddat inlägg"
+                  scrolling="no"
                   class="w-full h-full overflow-hidden"
                 ></iframe>
               </div>
@@ -408,11 +408,11 @@
 
             <!-- Card 2 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
-              <div class="aspect-w-16 aspect-h-9  h-96">
+              <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px]">
                 <iframe
                   src="https://www.linkedin.com/embed/feed/update/urn:li:share:7285659427091746817"
                   frameborder="0"
-                  
+                  scrolling="no"
                   allowfullscreen
                   title="Inbäddat inlägg"
                   class="w-full h-full"
@@ -422,12 +422,12 @@
 
             <!-- Card 3 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
-              <div class="aspect-w-16 aspect-h-9  h-96">
+              <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px]">
                 <iframe
                   src="https://www.linkedin.com/embed/feed/update/urn:li:share:7285541759995027456"
                   frameborder="0"
                   allowfullscreen
-                  
+                  scrolling="no"
                   title="Inbäddat inlägg"
                   class="w-full h-full"
                 ></iframe>
@@ -480,7 +480,7 @@
           <!-- CTA Button -->
           <div class="flex justify-center lg:justify-end lg:w-2/5 md:w-3/5 w-3/4">
             <a
-             @click="toggleMenu()"
+             
               href="#contact"
               class="px-4 flex items-center w-3/4 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200"
             >
