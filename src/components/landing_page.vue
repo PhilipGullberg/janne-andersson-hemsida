@@ -365,7 +365,7 @@
           <a
             href="https://www.linkedin.com/in/janne-andersson-1b0783335/"
             target="_blank"
-            class="flex md:w-1/3 sm:w-1/2 w-2/4 items-center md:px-2 px-4 py-4 my-4 mb-8 justify-center bg-[#0077B5] text-white font-semibold text-lg rounded-full shadow-md hover:bg-[#005983] transition duration-300"
+            class="flex md:w-1/3 sm:w-3/4 items-center md:px-2 px-4 py-4 my-4 mb-8 justify-center bg-[#0077B5] text-white font-semibold text-lg rounded-full shadow-md hover:bg-[#005983] transition duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -439,7 +439,7 @@
       </section>
 
       <!-- Assignments Section -->
-      <section class=" py-16 px-6 lg:px-24 bg-gray-100" id="uppdrag">
+      <section class=" py-16 px-6 lg:px-18 bg-gray-100" id="uppdrag">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">
             {{ currentText.assignmentsTitle }}
