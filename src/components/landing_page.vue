@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white text-gray-900 min-h-screen">
+  <div class="bg-white text-gray-900 min-h-screen" v-fade-in>
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -172,7 +172,7 @@
       </section>
 
       <!-- Stats Section -->
-      <section class="bg-white py-16 px-6 lg:px-24">
+      <section class="bg-white py-16 px-6 lg:px-24" v-fade-in>
         <div class="max-w-5xl mx-auto text-center grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           <div v-for="stat in currentText.stats" :key="stat.id" class="flex flex-col items-center">
             <!-- Animated Number -->
@@ -216,7 +216,7 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="pt-16 pb-8 px-6 lg:px-24 bg-gray-100">
+      <section id="about" class="pt-16 pb-8 px-6 lg:px-24 bg-gray-100" v-fade-in>
         <div class="max-w-5xl mx-auto text-center">
           <h2 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.aboutTitle }}
@@ -234,16 +234,12 @@
       </section>
       <section id="education" class="py-4 pb-16 px-6 lg:px-24 bg-gray-100">
   <div class="max-w-5xl mx-auto text-center">
-    <!-- <h2 class="text-3xl font-bold text-gray-900 mb-8">
-      {{ currentLanguage === 'sv' ? 'Utbildningar' : 'Education' }}
-    </h2> -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       <div
         v-for="education in currentText.educations"
         :key="education.id"
         class="flex flex-col items-center bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300"
-      >
-        <!-- Ikon, storlek och färg kan justeras -->
+      >'
         <div class="text-4xl text-[#124E66]">
           <i :class="education.iconClass"></i>
         </div>
@@ -256,9 +252,8 @@
 </section>
 
       <!-- Lectures Section -->
-      <section class="bg-white-100 py-10 px-8 lg:px-32" id="föreläsningar">
+      <section class="bg-white-100 py-10 px-8 lg:px-32" id="föreläsningar" v-fade-in>
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <!-- Left Column: Text Content -->
           <div>
             <h2 class="text-4xl font-bold text-gray-900 mb-6">
               {{ currentText.lectureTitle }}
@@ -278,7 +273,6 @@
             </a>
           </div>
 
-          <!-- Right Column: Image Gallery (unchanged) -->
           <div class="grid grid-cols-3 gap-4">
             <div class="aspect-w-4 aspect-h-3">
               <img
@@ -326,9 +320,8 @@
         </div>
       </section>
 
-      <section id="book" class="py-16 px-6 lg:px-24 bg-gradient-to-r from-[#124E66] to-[#124E66] text-white md:px-12 ">
+  <section id="book" class="py-16 px-6 lg:px-24 bg-gradient-to-r from-[#124E66] to-[#124E66] text-white md:px-12 " v-fade-in>
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
-    <!-- Bokbild -->
     <div class="md:w-1/2 sm:w-full self-center">
       <img
         src="https://bilder.akademibokhandeln.se/images_akb/9789171265302_383/att-bygga-ett-lag"
@@ -336,7 +329,6 @@
         class="rounded-lg shadow-2xl object-cover md:w-3/4 sm:w-3/5"
       />
     </div>
-    <!-- Textinnehåll -->
     <div class="md:w-1/2 sm:w-full">
       <h2 class="text-4xl font-extrabold mb-4">
         {{ currentText.bookSection.title }}
@@ -356,7 +348,7 @@
 </section>
 
       <!-- LinkedIn Section -->
-      <section class="bg-gray-50 py-16 px-6 lg:px-8">
+      <section class="bg-gray-50 py-16 px-6 lg:px-8" v-fade-in>
         <div class="max-w-7xl mx-auto text-center flex justify-center flex-col items-center">
           <h2 class="text-4xl font-bold text-gray-900 mb-12">
             {{ currentText.linkedInTitle }}
@@ -391,7 +383,6 @@
             {{ currentText.linkedInButton }}
           </a>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
-            <!-- Card 1 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300  overflow-hidden">
               <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px] overflow-hidden ">
                 <iframe
@@ -405,8 +396,6 @@
                 ></iframe>
               </div>
             </div>
-
-            <!-- Card 2 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
               <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px]">
                 <iframe
@@ -420,7 +409,6 @@
               </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
               <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px]">
                 <iframe
@@ -438,8 +426,7 @@
         </div>
       </section>
 
-      <!-- Assignments Section -->
-      <section class=" py-16 px-6 lg:px-18 bg-gray-100" id="uppdrag">
+      <section class=" py-16 px-6 lg:px-18 bg-gray-100" id="uppdrag" v-fade-in>
         <div class="max-w-7xl mx-auto">
           <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">
             {{ currentText.assignmentsTitle }}
@@ -463,11 +450,10 @@
       </section>
 
       <!-- "Contact Me" CTA Section -->
-      <div class="bg-[#124E66] text-white py-10">
+      <div class="bg-[#124E66] text-white py-10" v-fade-in>
         <div
           class="max-w-7xl mx-auto px-4 lg:px-24 flex flex-col lg:flex-row items-center gap-8 justify-between"
         >
-          <!-- Text Section -->
           <div class="text-center lg:text-left">
             <h2 class="text-3xl lg:text-4xl font-bold mb-4">
               {{ currentText.inviteTitle }}
@@ -477,7 +463,6 @@
             </p>
           </div>
 
-          <!-- CTA Button -->
           <div class="flex justify-center lg:justify-end lg:w-2/5 md:w-3/5 w-3/4">
             <a
              
@@ -505,7 +490,7 @@
       </div>
 
       <!-- Awards Section -->
-      <section id="utmärkelser" class="py-4">
+      <section id="utmärkelser" class="py-4" v-fade-in>
         <h1 class="text-4xl font-bold text-gray-900 text-center mb-10 mt-16">
           {{ currentText.awardsTitle }}
         </h1><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-16 px-6">
@@ -527,8 +512,7 @@
       </div>
     </div>
 
-    <!-- Minor Awards (Icon-based) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 md:px-16 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 md:px-16 px-6" v-fade-in>
       <div
         v-for="(award, index) in currentText.minorAwards"
         :key="index"
@@ -552,7 +536,7 @@
       <hr class="my-12 border-1 border-[#124E66]" />
 
       <!-- Contact Form -->
-      <section id="contact" class="py-10 px-6 lg:px-24 bg-white">
+      <section id="contact" class="py-10 px-6 lg:px-24 bg-white" v-fade-in>
         <div class="max-w-3xl mx-auto text-center">
           <h3 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.contactTitle }}
@@ -592,7 +576,6 @@
                 :placeholder="currentText.formMessagePlaceholder"
               ></textarea>
             </div>
-            <!--<input type="checkbox" name="botcheck" class="hidden" style="display: none;">-->
             <button
               type="submit"
               class="w-full bg-[#124E66] text-white py-3 font-semibold rounded-lg hover:bg-[#0f3d52]"
@@ -611,9 +594,6 @@
         </p>
       </footer>
     </main>
-
-    <!-- Example sub-component usage (if relevant) -->
-    <utmärkelser v-else @go-back="currentPage = 'main'" />
 
   </div>
 </template>

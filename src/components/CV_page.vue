@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50" v-fade-in>
       <div class="flex justify-between items-center px-10 py-4">
         <!-- Logo -->
         <div class="flex items-center gap-6">

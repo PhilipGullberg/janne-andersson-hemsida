@@ -13,6 +13,16 @@ export default {
     <router-view></router-view>
 </template>
 
-<style scoped>
+<style>
+.fade-start {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-end {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
 
 </style>
