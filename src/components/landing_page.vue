@@ -232,24 +232,7 @@
           </p>
         </div>
       </section>
-      <section id="education" class="py-4 pb-16 px-6 lg:px-24 bg-gray-100">
-  <div class="max-w-5xl mx-auto text-center">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <div
-        v-for="education in currentText.educations"
-        :key="education.id"
-        class="flex flex-col items-center bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300"
-      >'
-        <div class="text-4xl text-[#124E66]">
-          <i :class="education.iconClass"></i>
-        </div>
-        <p class="mt-4 text-lg text-gray-700 text-center">
-          {{ education.title }}
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      
 
       <!-- Lectures Section -->
       <section class="bg-white-100 py-10 px-8 lg:px-32" id="föreläsningar" v-fade-in>
@@ -342,7 +325,7 @@
         
       </blockquote>
       <a target="_blank"
-            class="px-4 flex items-center w-2/3 md:w-1/3 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200 mt-8" href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302">{{ currentText.bookSection.CTA }}</a>
+            class="px-4 flex items-center w-[150px] justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200 mt-8" href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302">{{ currentText.bookSection.CTA }}</a>
     </div>
   </div>
 </section>
@@ -467,7 +450,7 @@
             <a
              
               href="#contact"
-              class="px-4 flex items-center w-3/4 justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200"
+              class="px-4 flex items-center w-[200px] justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200"
             >
               {{ currentText.inviteCta }}
               <svg
@@ -541,8 +524,8 @@
           <h3 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.contactTitle }}
           </h3>
-          <form action="https://api.web3forms.com/submit" method="POST" class="bg-gray-100 p-6 rounded-lg shadow-md">
-            <input type="hidden" name="access_key" value="a274ae47-cae4-4fbf-bb60-747cf431ed3e">
+          <form action="https://formsubmit.co/janne@juandersson.com" method="POST" class="bg-gray-100 p-6 rounded-lg shadow-md">
+            <input type="hidden" name="_captcha" value="false">
             <div class="mb-4">
               <label class="block text-left text-sm font-medium text-gray-700">
                 {{ currentText.formName }}
@@ -581,7 +564,7 @@
               class="w-full bg-[#124E66] text-white py-3 font-semibold rounded-lg hover:bg-[#0f3d52]"
             >
               {{ currentText.formSubmit }}
-            </button>
+              </button>
           </form>
         </div>
       </section>
@@ -656,6 +639,12 @@ export default {
               link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
             },
             {
+              title: "Över Atlanten",
+              description: "Medverkade i den populära serien 'Över Atlanten' där han seglade över Atlanten tillsammans med andra kända profiler.",
+              image: "/src/assets/over_atlantic.png",
+              link: "https://sv.wikipedia.org/wiki/%C3%96ver_Atlanten"
+            },
+            {
               title: "Skavlan",
               description: "Gästade 'Skavlan' och diskuterade ledarskap, pressen inom elitfotboll och personliga insikter.",
               image: "https://idrottensaffarer.se/files/imagecache/100_proc/story_image/svt-skavlan-2017-e10-7d27.jpg",
@@ -666,12 +655,6 @@ export default {
               description: "Janne deltog i 'Masked Singer Sverige' som Mullvaden och överraskade publiken med sina framträdanden.",
               image: "https://tse1.mm.bing.net/th?id=OIP.crGMMqb03zcunnFiAWeAOQHaEK&pid=Api",
               link: "https://www.tv4.se/artikel/R9Xe927EwnzWz0QXmxAD5/haer-avsloejas-den-andra-deltagaren-i-masked-singer-sverige"
-            },
-            {
-              title: "Över Atlanten",
-              description: "Medverkade i den populära serien 'Över Atlanten' där han seglade över Atlanten tillsammans med andra kända profiler.",
-              image: "https://tse4.mm.bing.net/th?id=OIP.USxQsR-IaVoSNhztzX8vhwHaDt&pid=Api",
-              link: "https://sv.wikipedia.org/wiki/%C3%96ver_Atlanten"
             },
             {
               title: "Bäst i Test",
@@ -702,7 +685,7 @@ export default {
               image: "https://static.bonniernews.se/gcs/bilder/epi-30-dn/UploadedImages/2019/1/21/63bd70cb-0683-4d32-8c28-d062c6c0aa04/bigOriginal.jpg?io=1&width=1024&crop=16:9,smart"
             },
             {
-              title: "Årets tränare i Svensk fotboll, för sina insatser (2004, 2015)",
+              title: "Årets tränare i Svensk fotboll (2004, 2015)",
               image: "https://static-cdn.sr.se/images/160/06df03b3-00b2-4e11-a2ae-eecd64cf01ba.jpg?preset=1024x576"
             }
           ],
@@ -800,7 +783,7 @@ export default {
           aboutParagraph2:
             "Jannes karriär började på 1980-talet och tog honom från modersklubben Alets IK i Halmstad, till SM-guld med IFK Norrköping 2015. Han är känd för sitt tydliga ledarskap och förmågan att skapa starka lag.",
           aboutParagraph3:
-            'Idag inspirerar Janne genom föreläsningar och rådgivning där han delar sin passion för ledarskap och teamwork. Hans budskap är tydligt: "Tillsammans är vi starka."',
+            'Idag inspirerar Janne genom föreläsningar och rådgivning där han delar sin passion för ledarskap och teamwork. Utöver det har Janne även tagit Ceritifiering från Styrelseakademin. Hans budskap är tydligt: "Tillsammans är vi starka."',
 
           /* --- LECTURES --- */
           lectureTitle: "Föreläsningar",
@@ -1032,7 +1015,7 @@ export default {
           aboutParagraph2:
             "Janne's career began in the 1980s, taking him from his hometown club Alets IK in Halmstad to an Allsvenskan championship with IFK Norrköping in 2015. He is known for his clear leadership style and ability to build strong teams.",
           aboutParagraph3:
-            'Today, Janne inspires through lectures and consulting, sharing his passion for leadership and teamwork. His message is clear: "Together we are strong."',
+            'Today, Janne inspires through lectures and consulting, sharing his passion for leadership and teamwork. In addition, Janne has also been certified from "Styrelseakademin". His message is clear: "Together we are strong."',
 
           /* --- LECTURES --- */
           lectureTitle: "Lectures",
