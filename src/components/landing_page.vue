@@ -602,7 +602,7 @@ export default {
       {
         id: 1,
         title: "UEFA Pro License",
-        iconClass: "fas fa-trophy"  // Exempel på ikon, byt vid behov
+        iconClass: "fas fa-trophy" 
       },
       {
         id: 2,
@@ -641,7 +641,7 @@ export default {
             {
               title: "Över Atlanten",
               description: "Medverkade i den populära serien 'Över Atlanten' där han seglade över Atlanten tillsammans med andra kända profiler.",
-              image: "/src/assets/over_atlantic.png",
+              image: "/over_atlantic.png",
               link: "https://sv.wikipedia.org/wiki/%C3%96ver_Atlanten"
             },
             {
@@ -883,7 +883,7 @@ export default {
             {
   "title": "Across the Atlantic",
   "description": "Participated in the popular series 'Across the Atlantic', where he sailed across the Atlantic alongside other well-known personalities.",
-  "image": "https://tse4.mm.bing.net/th?id=OIP.USxQsR-IaVoSNhztzX8vhwHaDt&pid=Api",
+  "image": "/over_atlantic.png",
   "link": "https://sv.wikipedia.org/wiki/%C3%96ver_Atlanten"
 },
 {
