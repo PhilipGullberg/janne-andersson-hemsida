@@ -524,7 +524,7 @@
           <h3 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.contactTitle }}
           </h3>
-          <form action="https://formsubmit.co/janne@juandersson.com" method="POST" class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <form action="https://formsubmit.co/janne@juandersson.se" method="POST" class="bg-gray-100 p-6 rounded-lg shadow-md" @submit="handleSubmit">
             <input type="hidden" name="_captcha" value="false">
             <div class="mb-4">
               <label class="block text-left text-sm font-medium text-gray-700">
@@ -560,11 +560,39 @@
               ></textarea>
             </div>
             <button
+            type="submit"
+            class="w-full bg-[#124E66] text-white py-3 font-semibold rounded-lg hover:bg-[#0f3d52] transition flex items-center justify-center"
+            :disabled="isLoading"
+          >
+            <span v-if="!isLoading">{{ currentText.formSubmit }}</span>
+            <svg
+              v-else
+              class="animate-spin h-5 w-5 text-white ml-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              ></path>
+            </svg>
+          </button><!-- 
+            <button
               type="submit"
               class="w-full bg-[#124E66] text-white py-3 font-semibold rounded-lg hover:bg-[#0f3d52]"
             >
               {{ currentText.formSubmit }}
-              </button>
+              </button> -->
           </form>
         </div>
       </section>
@@ -582,15 +610,16 @@
 </template>
 
 <script>
-import axios from "axios";
 import { languageStore } from "../store/languageStore.js";
 
 export default {
+
   name: "LandingPage",
 
   data() {
     return {
       menuOpen: false,
+      isLoading: false,
       currentPage: "main",
       posts: [],
       
@@ -1093,11 +1122,12 @@ export default {
     });
     this.$refs.animatedNumbers.forEach((el) => observer.observe(el));
 
-    // Example: You might also fetch posts if you want
-    // axios.get("some-api-endpoint").then((res) => (this.posts = res.data));
   },
 
   methods: {
+    handleSubmit() {
+      this.isLoading = true; 
+    },
     scrollToTop() {
     window.scrollTo(0,0);
   },
