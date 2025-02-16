@@ -119,7 +119,7 @@
       </nav>
     </header>
   
-    <div class="bg-gray-50 py-24 px-6 lg:px-24">
+    <div class="bg-gray-50 pt-20 pb-8 px-6 lg:px-24">
       <div class="max-w-7xl lg:mx-32 ">
   
         <!-- Page Title -->
@@ -127,27 +127,7 @@
           {{ currentText.mainTitle }}
         </h1>
   
-        <!-- Contact Section -->
-        <section class="mb-16">
-          <h2 class="text-2xl font-semibold text-[#124E66] mb-4">
-            {{ currentText.contactTitle }}
-          </h2>
-          <div class="flex flex-col space-y-2">
-            <p>
-              <span class="font-bold">{{ currentText.phoneLabel }}</span>
-              +46 70 - 546 42 58
-            </p>
-            <p>
-              <span class="font-bold">{{ currentText.emailLabel }}</span>
-              <a
-                href="mailto:janne@juandersson.se"
-                class="text-[#124E66] hover:underline"
-              >
-                {{ currentText.emailLink }}
-              </a>
-            </p>
-          </div>
-        </section>
+       
   
         <!-- Work Experience -->
         <section class="mb-16">
@@ -269,59 +249,26 @@
                 </p>
               </div>
             </div>
+            <div class="flex items-start space-x-6">
+              <img
+                src="https://a.storyblok.com/f/126059/1720x1680/de0c693c89/sa-logo-master-vertikal_pos.png"
+                alt="University"
+                class="w-16"
+              />
+              <div>
+                <h3 class="text-lg font-bold">
+                  {{ currentText.education.certTitle }}
+                </h3>
+                <p class="text-gray-700 italic">
+                  {{ currentText.education.certDate }}
+                </p>
+              </div>
+            </div>
   
           </div>
         </section>
   
-        <!-- Book Section -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-semibold text-[#124E66] mb-4">
-            {{ currentText.bookSectionTitle }}
-          </h2>
-          <img
-            src="https://bilder.akademibokhandeln.se/images_akb/9789171265302_383/att-bygga-ett-lag"
-            alt="Att bygga ett lag"
-            class="w-20 mb-4"
-          />
-          <div>
-            <h3 class="text-lg font-bold mb-2">
-              {{ currentText.bookTitle }}
-            </h3>
-            <p class="text-gray-700">
-              {{ currentText.bookDescription }}
-            </p>
-          </div>
-        </section>
-  
-        <!-- Leadership Approach -->
-        <section class="mb-12">
-          <h2 class="text-2xl font-semibold text-[#124E66] mb-4">
-            {{ currentText.leadershipTitle }}
-          </h2>
-          <p class="text-gray-700">
-            {{ currentText.leadershipIntro }}
-          </p>
-          <ul class="list-disc list-inside mt-4 text-gray-700">
-            <li v-for="(bullet, index) in currentText.leadershipBullets" :key="index">
-              {{ bullet }}
-            </li>
-          </ul>
-          <p class="text-gray-700 mt-8 whitespace-pre-line">
-            {{ currentText.leadershipLongText }}
-          </p>
-        </section>
-  
-        <!-- Accolades Section -->
-        <section class="mb-16">
-          <h2 class="text-2xl font-semibold text-[#124E66] mb-4">
-            {{ currentText.awardsTitle }}
-          </h2>
-          <ul class="list-disc list-inside text-gray-700">
-            <li v-for="(award, index) in currentText.awardsList" :key="index">
-              {{ award }}
-            </li>
-          </ul>
-        </section>
+      
   
         <!-- Footer -->
         <footer class="text-center mt-16 text-sm text-gray-500">
@@ -360,7 +307,7 @@
                 title: "Förbundskapten, Svenska Herrlandslaget",
                 date: "2016 – 2023",
                 bullets: [
-                  "Ledde Sverige till VM-kvartsfinal 2018 med vinster mot Schweiz och Tyskland.",
+                  "Ledde Sverige till VM-kvartsfinal mot England 2018.",
                   "94 landskamper som förbundskapten – flest i svensk historia.",
                 ],
               },
@@ -369,15 +316,16 @@
                 date: "2011 – 2016",
                 bullets: [
                   "Vann Allsvenskan 2015.",
-                  "Flest matcher i klubbens historia som manager (162).",
+                  "Flest allsvenska matcher i klubbens historia som manager.",
                 ],
               },
               job3: {
-                title: "Manager, Halmstad BK",
+                title: "Chefstränare, Halmstads BK",
                 date: "2004 – 2009",
                 bullets: [
                   "Andraplats i Allsvenskan 2004.",
                   "Vinst mot Sporting CP i UEFA-cupen 2005.",
+                  "Flest allsvenska matcher i klubbens historia som chefstränare."
                 ],
               },
             },
@@ -388,6 +336,8 @@
               uefaProDate: "2008 – 2010",
               uniTitle: "University of Sport education",
               uniDate: "1984 – 1986",
+              certTitle: "Certifierad Styrelseledamot från Styrelseakademien",
+              certDate: "2024",
             },
   
             bookSectionTitle: "Min bok",
@@ -437,8 +387,9 @@
                 title: "Head Coach, Swedish Men's National Team",
                 date: "2016 – 2023",
                 bullets: [
-                  "Led Sweden to the 2018 World Cup quarterfinals with victories over Switzerland and Germany.",
+                  "Led Sweden to the 2018 World Cup quarterfinals against England.",
                   "94 international matches as head coach – the most in Swedish history.",
+                  "Most 'allsvenska' matches in the club's history as Head Coach.",
                 ],
               },
               job2: {
@@ -446,11 +397,11 @@
                 date: "2011 – 2016",
                 bullets: [
                   "Won Allsvenskan in 2015.",
-                  "Most matches in the club's history as manager (162).",
+                  "Most 'allsvenska' matches in the club's history as manager.",
                 ],
               },
               job3: {
-                title: "Manager, Halmstad BK",
+                title: "Head Coach, Halmstads BK",
                 date: "2004 – 2009",
                 bullets: [
                   "Second place in Allsvenskan 2004.",
@@ -465,6 +416,8 @@
               uefaProDate: "2008 – 2010",
               uniTitle: "University of Sport Education",
               uniDate: "1968 – 1971",
+              certTitle: "Certified Board member from 'Styrelseakademien'",
+              certDate: "2024",
             },
   
             bookSectionTitle: "My Book",

@@ -48,7 +48,7 @@
             @click="changeLanguage('sv')"
             class="flex items-center space-x-2 px-4 py-2 border rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
           >
-            <img
+            <img loading="lazy"
               src="https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg"
               alt="Swedish Flag"
               class="w-6 h-6"
@@ -60,7 +60,7 @@
             @click="changeLanguage('en')"
             class="flex items-center space-x-2 px-4 py-2 border rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
           >
-            <img
+            <img loading="lazy" 
               src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
               alt="English Flag"
               class="w-6 h-6"
@@ -96,7 +96,7 @@
               @click="changeLanguage('sv')"
               class="flex items-center space-x-2 px-2 py-1 border rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
             >
-              <img
+              <img loading="lazy" 
                 src="https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg"
                 alt="Swedish Flag"
                 class="w-6 h-6"
@@ -108,7 +108,7 @@
               @click="changeLanguage('en')"
               class="flex items-center space-x-2 px-2 py-1 border rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
             >
-              <img
+              <img loading="lazy" 
                 src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
                 alt="English Flag"
                 class="w-6 h-6"
@@ -163,8 +163,8 @@
           </a>
         </div>
         <div class="mt-10 lg:mt-4 md:ms-4 lg:max-w-md">
-          <img
-            src="https://www.cafe.se/app/uploads/2021/05/dd97e726-cafe_janne1337-1.jpg"
+          <img loading="lazy" 
+            src="/Janne_hero.webp"
             alt="Placeholder for Hero"
             class="rounded-lg shadow-lg object-cover w-[400px] h-[500px]"
           />
@@ -258,42 +258,42 @@
 
           <div class="grid grid-cols-3 gap-4">
             <div class="aspect-w-4 aspect-h-3">
-              <img
+              <img loading="lazy" 
                 src="https://static.bonniernews.se/ba/7a1ecaba-d429-4250-a588-7aee0c459211.jpeg?width=1400&format=pjpg&auto=webp"
                 alt="Föreläsning Bild 1"
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="aspect-w-4 aspect-h-3">
-              <img
+              <img loading="lazy" 
                 src="https://media.licdn.com/dms/image/v2/D4D22AQFpopqGOf_Tkg/feedshare-shrink_800/B4DZR6BYcqHIAk-/0/1737213976683?e=1740614400&v=beta&t=aG9E7akk9w8s37MtAArQj0hnu7sX_SWb6c0qvKziNa4"
                 alt="Föreläsning Bild 2"
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="aspect-w-4 aspect-h-3">
-              <img
+              <img loading="lazy" 
                 src="https://static.bonniernews.se/ba/39306555-a7ed-5735-9cd2-2d2825890dec.jpeg?width=1400&format=pjpg&auto=webp"
                 alt="Föreläsning Bild 3"
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="aspect-w-4 aspect-h-3">
-              <img
+              <img loading="lazy" 
                 src="https://media.licdn.com/dms/image/v2/D4D22AQGzwYfeZNPnVg/feedshare-shrink_2048_1536/B4DZR6BYdfGkAo-/0/1737213974242?e=1740614400&v=beta&t=O7AnyAfoknL5lzaMTtCGs63BSxzG6oodc-xLT9IwKLQ"
                 alt="Föreläsning Bild 4"
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="aspect-w-4 aspect-h-3">
-              <img
+              <img loading="lazy" 
                 src="https://lidingoforsamling.se/wp-content/uploads/foredrag-janne-andersson.jpg"
                 alt="Föreläsning Bild 5"
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="aspect-w-4 aspect-h-3">
-              <img
+              <img loading="lazy" 
                 src="https://static.bonniernews.se/ba/cde8809d-b154-4851-871c-8bd5dfb443ab.jpeg?crop=4752%2C2673%2Cx0%2Cy178&width=1400&format=pjpg&auto=webp"
                 alt="Föreläsning Bild 6"
                 class="rounded-lg shadow-lg object-cover"
@@ -306,7 +306,7 @@
   <section id="book" class="py-16 px-6 lg:px-24 bg-gradient-to-r from-[#124E66] to-[#124E66] text-white md:px-12 " v-fade-in>
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
     <div class="md:w-1/2 sm:w-full self-center">
-      <img
+      <img loading="lazy" 
         src="https://bilder.akademibokhandeln.se/images_akb/9789171265302_383/att-bygga-ett-lag"
         alt="Bokens omslag"
         class="rounded-lg shadow-2xl object-cover md:w-3/4 sm:w-3/5"
@@ -419,7 +419,7 @@
           </p>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div v-for="(card, index) in currentText.cards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-40 object-cover " />
+          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-40 object-cover " />
           <div class="p-6">
             <h3 class="text-2xl font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
             <p class="text-gray-700 mb-4">{{ card.description }}</p>
@@ -486,7 +486,7 @@
           {{ award.title }}
         </h3>
         <div class="aspect-w-16 aspect-h-9 flex-shrink-0">
-          <img
+          <img loading="lazy" 
             class="w-full h-full object-cover"
             :src="award.image"
             :alt="award.title"
@@ -751,6 +751,11 @@ export default {
               iconClass: "fas fa-medal text-[#124E66] text-3xl"
             },
             {
+              title: "Rankad 17:e bästa tränaren i världen, FourFourTwo",
+              year: 2018,
+              iconClass: "fas fa-star text-[#124E66] text-3xl"
+            },
+            {
               title: "Årets Hallänning",
               year: 2019,
               iconClass: "fas fa-star text-[#124E66] text-3xl"
@@ -803,7 +808,7 @@ export default {
           heroTitle: "Janne Andersson",
           heroDescription:
             "Efter 40 år som tränare inom svensk fotboll, inklusive rollen som förbundskapten för herrlandslaget, arbetar han numera med föreläsningar, ambassadörsuppdrag, mentorskap och olika mediaproduktioner.",
-          heroCta: "Kontakta mig",
+          heroCta: "Kontakta Janne",
 
           /* --- ABOUT --- */
           aboutTitle: "Om Janne",
@@ -836,7 +841,7 @@ export default {
           inviteTitle: "Välkommen att kontakta Janne Andersson",
           inviteParagraph:
             "Hör gärna av er om ni är intresserade av att komma i kontakt, för föreläsningar, ambassadörsuppdrag eller annat.",
-          inviteCta: "Kontakta mig",
+          inviteCta: "Kontakta Janne",
 
           /* --- AWARDS SECTION --- */
           awardsTitle: "Utmärkelser",
@@ -983,6 +988,11 @@ export default {
               iconClass: "fas fa-medal text-[#124E66] text-3xl"
             },
             {
+              title: "Ranked 17th best Coach in the World, FourFourTwo",
+              year: 2018,
+              iconClass: "fas fa-star text-[#124E66] text-3xl"
+            },
+            {
               title: "Hallandian of the Year",
               year: 2019,
               iconClass: "fas fa-star text-[#124E66] text-3xl"
@@ -1035,7 +1045,7 @@ export default {
           heroTitle: "Janne Andersson",
           heroDescription:
             "After 40 years of coaching in Swedish football, including serving as head coach of the men's national team, he is now engaged in lectures, ambassador roles, mentorships, and various media productions.",
-          heroCta: "Contact Me",
+          heroCta: "Contact Janne",
 
           /* --- ABOUT --- */
           aboutTitle: "About Janne",
@@ -1068,7 +1078,7 @@ export default {
           inviteTitle: "Feel free to contact Janne Andersson",
           inviteParagraph:
             "Reach out if you’re interested in getting in touch for lectures, ambassador roles, or other opportunities.",
-          inviteCta: "Contact Me",
+          inviteCta: "Contact Janne",
 
           /* --- AWARDS SECTION --- */
           awardsTitle: "Awards",
