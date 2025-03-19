@@ -266,7 +266,7 @@
             </div>
             <div class="aspect-w-4 aspect-h-3">
               <img loading="lazy" 
-                src="https://media.licdn.com/dms/image/v2/D4D22AQFpopqGOf_Tkg/feedshare-shrink_800/B4DZR6BYcqHIAk-/0/1737213976683?e=1740614400&v=beta&t=aG9E7akk9w8s37MtAArQj0hnu7sX_SWb6c0qvKziNa4"
+                src="https://media.licdn.com/dms/image/v2/D4D22AQHtxv1SIPqS2g/feedshare-shrink_1280/B4DZVro9jCHYAo-/0/1741267664899?e=1745452800&v=beta&t=xPWI04dCJzVdDV0NZ2wzzqWjysCKUsYpdKK6jp2m0jA"
                 alt="Föreläsning Bild 2"
                 class="rounded-lg shadow-lg object-cover"
               />
@@ -278,16 +278,17 @@
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
+           
             <div class="aspect-w-4 aspect-h-3">
               <img loading="lazy" 
-                src="https://media.licdn.com/dms/image/v2/D4D22AQGzwYfeZNPnVg/feedshare-shrink_2048_1536/B4DZR6BYdfGkAo-/0/1737213974242?e=1740614400&v=beta&t=O7AnyAfoknL5lzaMTtCGs63BSxzG6oodc-xLT9IwKLQ"
+                src="https://lidingoforsamling.se/wp-content/uploads/foredrag-janne-andersson.jpg"
                 alt="Föreläsning Bild 4"
                 class="rounded-lg shadow-lg object-cover"
               />
             </div>
             <div class="aspect-w-4 aspect-h-3">
               <img loading="lazy" 
-                src="https://lidingoforsamling.se/wp-content/uploads/foredrag-janne-andersson.jpg"
+                src="https://media.licdn.com/dms/image/v2/D4D22AQEF86O5txLRJw/feedshare-shrink_1280/B4DZTlJSYbGcAk-/0/1739011211565?e=1745452800&v=beta&t=thF40woQHgahOv46ZZ7FBB6YSJCgiGqbOkNYnk5bcEY"
                 alt="Föreläsning Bild 5"
                 class="rounded-lg shadow-lg object-cover"
               />
