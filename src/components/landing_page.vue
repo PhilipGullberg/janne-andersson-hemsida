@@ -525,8 +525,8 @@
           <h3 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.contactTitle }}
           </h3>
-          <form action="https://formsubmit.co/janne@juandersson.se" method="POST" class="bg-gray-100 p-6 rounded-lg shadow-md" @submit="handleSubmit">
-            <input type="hidden" name="_captcha" value="false">
+          <form action="https://api.web3forms.com/submit" method="POST" class="bg-gray-100 p-6 rounded-lg shadow-md" @submit="handleSubmit">
+            <input type="hidden" name="access_key" value="c968ef8b-4000-42ae-9741-e4f0e7c6f58a">
             <div class="mb-4">
               <label class="block text-left text-sm font-medium text-gray-700">
                 {{ currentText.formName }}
