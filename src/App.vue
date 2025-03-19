@@ -1,6 +1,6 @@
 <script>
 import landing_page from './components/landing_page.vue';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/vue"
 
 export default {
   components: {
