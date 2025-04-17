@@ -164,8 +164,9 @@
         </div>
         <div class="mt-10 lg:mt-4 md:ms-4 lg:max-w-md">
           <img loading="lazy" 
-            src="/Janne_hero.webp"
+            src="/Janne_profil.jpg"
             alt="Placeholder for Hero"
+            style="object-position:20% 50%;"
             class="rounded-lg shadow-lg object-cover w-[400px] h-[500px]"
           />
         </div>
@@ -369,8 +370,9 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300  overflow-hidden">
               <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px] overflow-hidden ">
+                
                 <iframe
-                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7288187782546493440"
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7314149831021670400?collapsed=1"
                   frameborder="0"
                   
                   allowfullscreen
@@ -382,8 +384,9 @@
             </div>
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
               <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px]">
+                
                 <iframe
-                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7285659427091746817"
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7303881517049548800?collapsed=1"
                   frameborder="0"
                   scrolling="no"
                   allowfullscreen
@@ -395,8 +398,9 @@
 
             <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
               <div class="aspect-w-16 aspect-h-9 h-[450px] w-[350px]">
+               
                 <iframe
-                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7285541759995027456"
+                 src="https://www.linkedin.com/embed/feed/update/urn:li:share:7300824725792997378?collapsed=1"
                   frameborder="0"
                   allowfullscreen
                   scrolling="no"
