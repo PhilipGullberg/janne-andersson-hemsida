@@ -305,6 +305,29 @@
         </div>
       </section>
 
+      <section class=" py-16 px-6 lg:px-18 bg-gray-100" id="engagemang" v-fade-in>
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">
+            {{ currentText.engagementsTitle }}
+          </h2>
+          <!-- <p class="text-l text-gray-700 text-center mb-8">
+            {{ currentText.engagementsDescription }}
+          </p> -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div v-for="(card, index) in currentText.engagementcards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-40 object-cover " />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
+            <p class="text-gray-700 mb-4">{{ card.description }}</p>
+            <a :href="card.link" target="_blank" class="text-[#124E66] font-medium hover:underline">
+              {{ currentText.readMore }}
+            </a>
+          </div>
+        </div>
+      </div>
+        </div>
+      </section>
+
   <section id="book" class="py-16 px-6 lg:px-24 bg-gradient-to-r from-[#124E66] to-[#124E66] text-white md:px-12 " v-fade-in>
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
     <div class="md:w-1/2 sm:w-full self-center">
@@ -659,9 +682,9 @@ export default {
           awardsTitle: "Utmärkelser",
           title: "Uppdrag och Produktioner",
           readMore: "Läs mer",
-          cards: [
+          engagementcards: [
             {
-              title: "Hjärtuppropet",
+              title:"Hjärtuppropet",
               description: "Ambassadör för Hjärtuppropet, där han arbetar för att öka kunskapen om hjärt-lungräddning och hjärtstartare.",
               image: "https://www.hjartuppropet.se/wp-content/uploads/2024/12/Janne-Andersson-13-683x1024.jpg",
               link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
@@ -672,6 +695,14 @@ export default {
               image: "https://tse1.mm.bing.net/th?id=OIP.wl68Mvb13L3xkCg6felrnAHaE0&pid=Api",
               link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
             },
+            {
+              title: "Craft Sportswear",
+              description: "Janne är styrelseledamot i företaget och bidrar med sin erfarnhet inom sport och ledarskap.",
+              image: "/janne_craft.jpg",
+              link: "https://www.nwg.se/press/janne-andersson-forstarker-crafts-styrelse/"
+            },
+          ],
+          cards: [
             {
               title: "Över Atlanten",
               description: "Medverkade i den populära serien 'Över Atlanten' där han seglade över Atlanten tillsammans med andra kända profiler.",
@@ -822,7 +853,7 @@ export default {
           aboutParagraph2:
             "Jannes karriär började på 1980-talet och tog honom från moderklubben Alets IK i Halmstad, till SM-guld med IFK Norrköping 2015. Han är känd för sitt tydliga ledarskap och förmågan att skapa starka lag.",
           aboutParagraph3:
-            'Idag inspirerar Janne genom föreläsningar och rådgivning där han delar sin passion för ledarskap och teamwork. Utöver det har Janne även tagit Ceritifiering från Styrelseakademin. Hans budskap är tydligt: "Tillsammans är vi starka."',
+            'Idag inspirerar Janne genom föreläsningar och rådgivning där han delar sin passion för ledarskap och teamwork. Hans budskap är tydligt: "Tillsammans är vi starka."',
 
           /* --- LECTURES --- */
           lectureTitle: "Föreläsningar",
@@ -841,6 +872,10 @@ export default {
           assignmentsTitle: "Uppdrag och Produktioner",
           assignmentsDescription:
             "Janne har deltagit i mängder av intervjuer, produktioner och andra uppdrag, här är ett antal utvalda där han deltagit på sistone.",
+
+          engagementsTitle: "Engagemang",
+          engagementsDescription:
+            "Janne engagerar sig i flera olika viktiga ambassadörsuppdrag och organisationer. Han arbetar för att öka medvetenheten om hjärt-lungräddning och hjärtstartare, samt stödjer Barncancerfonden i deras viktiga arbete för barn med cancer.",
 
           /* --- CTA SECTION --- */
           inviteTitle: "Välkommen att kontakta Janne Andersson",
