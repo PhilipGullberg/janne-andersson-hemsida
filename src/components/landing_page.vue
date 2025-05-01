@@ -315,9 +315,12 @@
           </p> -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="(card, index) in currentText.engagementcards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-40 object-cover " />
+          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-80 object-cover " />
           <div class="p-6">
+            <div class="flex gap-4 mb-4">
+            <img :src=card.logo alt="Logo" class="w-10 h-9 mb-4" />
             <h3 class="text-2xl font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
+          </div>
             <p class="text-gray-700 mb-4">{{ card.description }}</p>
             <a :href="card.link" target="_blank" class="text-[#124E66] font-medium hover:underline">
               {{ currentText.readMore }}
@@ -685,17 +688,20 @@ export default {
           engagementcards: [
             {
               title:"Hjärtuppropet",
+              logo:"/logga_hjart.png",
               description: "Ambassadör för Hjärtuppropet, där han arbetar för att öka kunskapen om hjärt-lungräddning och hjärtstartare.",
               image: "https://www.hjartuppropet.se/wp-content/uploads/2024/12/Janne-Andersson-13-683x1024.jpg",
               link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
             },
             {
+              logo:"/barncancerfonden_logga.jfif",
               title: "Barncancerfonden",
-              description: "Janne är 'förbundskapten' för Barncancerfondens lag och arbetar för att öka medvetenheten om barncancer.",
-              image: "https://tse1.mm.bing.net/th?id=OIP.wl68Mvb13L3xkCg6felrnAHaE0&pid=Api",
+              description: "Janne är 'förbundskapten' för Barncancerfondens lag där han bla arbetar med projektet #Fotbollströjefredag.",
+              image: "/bcf_bild.png",
               link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
             },
             {
+              logo:"/craft_logga.png",
               title: "Craft Sportswear",
               description: "Janne är styrelseledamot i företaget och bidrar med sin erfarnhet inom sport och ledarskap.",
               image: "/janne_craft.jpg",
@@ -875,7 +881,7 @@ export default {
 
           engagementsTitle: "Engagemang",
           engagementsDescription:
-            "Janne engagerar sig i flera olika viktiga ambassadörsuppdrag och organisationer. Han arbetar för att öka medvetenheten om hjärt-lungräddning och hjärtstartare, samt stödjer Barncancerfonden i deras viktiga arbete för barn med cancer.",
+            "Janne engagerar sig i flera olika viktiga ambassadörsuppdrag och organisationer. Han arbetar bla med #fotbollströjefredag för att öka medvetenheten om hjärt-lungräddning och hjärtstartare, samt stödjer Barncancerfonden i deras viktiga arbete för barn med cancer.",
 
           /* --- CTA SECTION --- */
           inviteTitle: "Välkommen att kontakta Janne Andersson",
