@@ -217,7 +217,7 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="pt-16 pb-8 px-6 lg:px-24 bg-gray-100" v-fade-in>
+      <section id="about" class="pt-12 pb-12 px-6 lg:px-24 bg-gray-100" v-fade-in>
         <div class="max-w-5xl mx-auto text-center">
           <h2 class="text-3xl font-semibold text-gray-900 mb-6">
             {{ currentText.aboutTitle }}
@@ -236,9 +236,9 @@
       
 
       <!-- Lectures Section -->
-      <section class="bg-white-100 py-10 px-8 lg:px-32" id="föreläsningar" v-fade-in>
+      <section class="bg-white-100 py-10 px-8 lg:px-24" id="föreläsningar" v-fade-in>
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div class="w-full">
             <h2 class="text-4xl font-bold text-gray-900 mb-6">
               {{ currentText.lectureTitle }}
             </h2>
@@ -267,7 +267,7 @@
             </div>
             <div class="aspect-w-4 aspect-h-3">
               <img loading="lazy" 
-                src="https://media.licdn.com/dms/image/v2/D4D22AQHtxv1SIPqS2g/feedshare-shrink_1280/B4DZVro9jCHYAo-/0/1741267664899?e=1745452800&v=beta&t=xPWI04dCJzVdDV0NZ2wzzqWjysCKUsYpdKK6jp2m0jA"
+                src="/Janne_sitter.jpg"
                 alt="Föreläsning Bild 2"
                 class="rounded-lg shadow-lg object-cover"
               />
@@ -289,7 +289,7 @@
             </div>
             <div class="aspect-w-4 aspect-h-3">
               <img loading="lazy" 
-                src="https://media.licdn.com/dms/image/v2/D4D22AQEF86O5txLRJw/feedshare-shrink_1280/B4DZTlJSYbGcAk-/0/1739011211565?e=1745452800&v=beta&t=thF40woQHgahOv46ZZ7FBB6YSJCgiGqbOkNYnk5bcEY"
+                src="/Janne.jpg"
                 alt="Föreläsning Bild 5"
                 class="rounded-lg shadow-lg object-cover"
               />
@@ -812,7 +812,7 @@ export default {
           /* --- HERO --- */
           heroTitle: "Janne Andersson",
           heroDescription:
-            "Efter 40 år som tränare inom svensk fotboll, inklusive rollen som förbundskapten för herrlandslaget, arbetar han numera med föreläsningar, ambassadörsuppdrag, mentorskap och olika mediaproduktioner.",
+            "Efter 40 år som tränare inom svensk fotboll, inklusive rollen som förbundskapten för herrlandslaget, arbetar han numera med föreläsningar, ambassadörsuppdrag, mentorskap, styrelseuppdrag och olika mediaproduktioner.",
           heroCta: "Kontakta Janne",
 
           /* --- ABOUT --- */
@@ -820,7 +820,7 @@ export default {
           aboutParagraph1:
             "Med över 40 års erfarenhet inom svensk fotboll är Janne Andersson en av landets mest respekterade tränare och ledare. Som förbundskapten (2016–2023) ledde han Sverige till flera framgångar, bland annat VM-kvartsfinalen i Ryssland 2018.",
           aboutParagraph2:
-            "Jannes karriär började på 1980-talet och tog honom från modersklubben Alets IK i Halmstad, till SM-guld med IFK Norrköping 2015. Han är känd för sitt tydliga ledarskap och förmågan att skapa starka lag.",
+            "Jannes karriär började på 1980-talet och tog honom från moderklubben Alets IK i Halmstad, till SM-guld med IFK Norrköping 2015. Han är känd för sitt tydliga ledarskap och förmågan att skapa starka lag.",
           aboutParagraph3:
             'Idag inspirerar Janne genom föreläsningar och rådgivning där han delar sin passion för ledarskap och teamwork. Utöver det har Janne även tagit Ceritifiering från Styrelseakademin. Hans budskap är tydligt: "Tillsammans är vi starka."',
 
@@ -845,7 +845,7 @@ export default {
           /* --- CTA SECTION --- */
           inviteTitle: "Välkommen att kontakta Janne Andersson",
           inviteParagraph:
-            "Hör gärna av er om ni är intresserade av att komma i kontakt, för föreläsningar, ambassadörsuppdrag eller annat.",
+            "Hör gärna av er om ni är intresserade av att komma i kontakt med Janne för föreläsningar, mentorskap, styrelseuppdrag eller annat.",
           inviteCta: "Kontakta Janne",
 
           /* --- AWARDS SECTION --- */
@@ -1049,7 +1049,7 @@ export default {
           /* --- HERO --- */
           heroTitle: "Janne Andersson",
           heroDescription:
-            "After 40 years of coaching in Swedish football, including serving as head coach of the men's national team, he is now engaged in lectures, ambassador roles, mentorships, and various media productions.",
+            "After 40 years of coaching in Swedish football, including serving as head coach of the men's national team, he is now engaged in lectures, ambassador roles, mentorships, as a board member and various media productions.",
           heroCta: "Contact Janne",
 
           /* --- ABOUT --- */
@@ -1082,7 +1082,7 @@ export default {
           /* --- CTA SECTION --- */
           inviteTitle: "Feel free to contact Janne Andersson",
           inviteParagraph:
-            "Reach out if you’re interested in getting in touch for lectures, ambassador roles, or other opportunities.",
+            "Reach out if you’re interested in getting in touch with Janne concerning lectures, mentorship, board membership roles or other opportunities.",
           inviteCta: "Contact Janne",
 
           /* --- AWARDS SECTION --- */
