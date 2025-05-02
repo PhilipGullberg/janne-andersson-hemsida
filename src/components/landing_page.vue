@@ -698,7 +698,7 @@ export default {
             {
               logo:"/barncancerfonden_logga.jfif",
               title: "Barncancerfonden",
-              description: "Janne är 'förbundskapten' för Barncancerfondens lag där han bla arbetar med projektet #Fotbollströjefredag.",
+              description: "Janne är Förbundskapten för Barncancerfondens lag där han bla arbetar med projektet #Fotbollströjefredag.",
               image: "/bcf_bild.png",
               link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
             },
