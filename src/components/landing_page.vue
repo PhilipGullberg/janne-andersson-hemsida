@@ -72,6 +72,7 @@
         <nav class="hidden md:flex space-x-6 items-center">
           <a href="#about" class="hover:underline text-gray-700">{{ currentText.navAbout }}</a>
           <a href="#föreläsningar" class="hover:underline text-gray-700">{{ currentText.navLectures }}</a>
+          <a href="#engagemang" class="hover:underline text-gray-700">{{ currentText.navEngagemang }}</a>
           <a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a>
           <a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a>
           <a
@@ -128,6 +129,7 @@
 
           <li><a href="#about" class="hover:underline text-gray-700">{{ currentText.navAbout }}</a></li>
           <li><a href="#föreläsningar" class="hover:underline text-gray-700">{{ currentText.navLectures }}</a></li>
+          <li><a href="#engagemang" class="hover:underline text-gray-700">{{ currentText.navEngagemang }}</a></li>
           <li><a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a></li>
           <li><a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a></li>
           <li>
@@ -448,7 +450,7 @@
           <p class="text-l text-gray-700 text-center mb-8">
             {{ currentText.assignmentsDescription }}
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="(card, index) in currentText.cards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
           <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-40 object-cover " />
           <div class="p-6">
@@ -703,7 +705,7 @@ export default {
             {
               logo:"/craft_logga.png",
               title: "Craft Sportswear",
-              description: "Janne är styrelseledamot i företaget och bidrar med sin erfarnhet inom sport och ledarskap.",
+              description: "Janne är styrelseledamot i företaget och bidrar med sin erfarenhet inom sport och ledarskap.",
               image: "/janne_craft.jpg",
               link: "https://www.nwg.se/press/janne-andersson-forstarker-crafts-styrelse/"
             },
@@ -842,6 +844,7 @@ export default {
           /* --- NAVIGATION --- */
           navAbout: "Om Janne",
           navLectures: "Föreläsningar",
+          navEngagemang: "Engagemang",
           navAssignments: "Uppdrag",
           navAwards: "Utmärkelser",
           navContact: "Kontakt",
