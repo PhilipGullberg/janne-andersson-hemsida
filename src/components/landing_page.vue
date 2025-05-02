@@ -880,7 +880,7 @@ export default {
           /* --- ASSIGNMENTS --- */
           assignmentsTitle: "Uppdrag och Produktioner",
           assignmentsDescription:
-            "Janne har deltagit i mängder av intervjuer, produktioner och andra uppdrag, här är ett antal utvalda där han deltagit på sistone.",
+            "Janne har deltagit i mängder av intervjuer, produktioner och andra uppdrag. Här är några exempel.",
 
           engagementsTitle: "Engagemang",
           engagementsDescription:
