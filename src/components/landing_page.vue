@@ -852,7 +852,7 @@ export default {
           /* --- HERO --- */
           heroTitle: "Janne Andersson",
           heroDescription:
-            "Efter 40 år som tränare inom svensk fotboll, inklusive rollen som förbundskapten för herrlandslaget, arbetar han numera med föreläsningar, ambassadörsuppdrag, mentorskap, styrelseuppdrag och olika mediaproduktioner.",
+            "Efter 40 år som tränare inom svensk fotboll, inklusive rollen som förbundskapten för herrlandslaget, arbetar han numera med ledarskapsuppdrag, föreläsningar, ambassadörsuppdrag, mentorskap, styrelseuppdrag och olika mediaproduktioner.",
           heroCta: "Kontakta Janne",
 
           /* --- ABOUT --- */
@@ -889,7 +889,7 @@ export default {
           /* --- CTA SECTION --- */
           inviteTitle: "Välkommen att kontakta Janne Andersson",
           inviteParagraph:
-            "Hör gärna av er om ni är intresserade av att komma i kontakt med Janne för föreläsningar, mentorskap, styrelseuppdrag eller annat.",
+            "Hör gärna av er om ni är intresserade av att komma i kontakt med Janne för ledarskapsuppdrag, föreläsningar, mentorskap, styrelseuppdrag eller annat.",
           inviteCta: "Kontakta Janne",
 
           /* --- AWARDS SECTION --- */
