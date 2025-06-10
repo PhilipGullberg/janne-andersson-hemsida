@@ -315,12 +315,12 @@
           <!-- <p class="text-l text-gray-700 text-center mb-8">
             {{ currentText.engagementsDescription }}
           </p> -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         <div v-for="(card, index) in currentText.engagementcards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
           <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-80 object-cover " />
           <div class="p-6">
             <div class="flex gap-4 mb-4">
-            <img :src=card.logo alt="Logo" class="w-10 h-9 mb-4" />
+            <img :src=card.logo alt="Logo" class="w-14 h-14 mb-4" />
             <h3 class="text-2xl font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
           </div>
             <p class="text-gray-700 mb-4">{{ card.description }}</p>
@@ -708,6 +708,13 @@ export default {
               description: "Janne är styrelseledamot i företaget och bidrar med sin erfarenhet inom sport och ledarskap.",
               image: "/janne_craft.jpg",
               link: "https://www.nwg.se/press/janne-andersson-forstarker-crafts-styrelse/"
+            },
+            {
+              logo:"/blaljusisamverkan-logo.png",
+              title: "Insamlingsstiftelsen Blåljus i samverkan",
+              description: "Janne körde tillsammans med representanter för Blåljus i samverkan, 2 sjukvårdstransportfordon och 2 ambulanser till Ukraina. Numera är han även ambassadör för stiftelsen.",
+              image: "/Janne_ukraina.jpg",
+              link: "https://blaljusisamverkan.se/"
             },
           ],
           cards: [
