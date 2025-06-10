@@ -721,7 +721,7 @@ export default {
             {
               title: "Över Atlanten",
               description: "Medverkade i den populära serien 'Över Atlanten' där han seglade över Atlanten tillsammans med andra kända profiler.",
-              image: "/over_atlantic.png",
+              image: "/over_atlantic.webp",
               link: "https://sv.wikipedia.org/wiki/%C3%96ver_Atlanten"
             },
             {
