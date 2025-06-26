@@ -698,7 +698,7 @@ export default {
             {
               logo:"/barncancerfonden_logga.jfif",
               title: "Barncancerfonden",
-              description: "Janne är Förbundskapten för Barncancerfondens lag där han bla arbetar med projektet #Fotbollströjefredag.",
+              description: "Janne är Ambassadör för Barncancerfonden. Han arbetar bla med projektet #Fotbollströjefredag där han är Förbundskapten för barncancerfondens lag.",
               image: "/bcf_bild.png",
               link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
             },
@@ -712,7 +712,7 @@ export default {
             {
               logo:"/blaljusisamverkan-logo.png",
               title: "Insamlingsstiftelsen Blåljus i samverkan",
-              description: "Janne körde tillsammans med representanter för Blåljus i samverkan, 2 sjukvårdstransportfordon och 2 ambulanser till Ukraina. Numera är han även ambassadör för stiftelsen.",
+              description: "Janne körde tillsammans med representanter för Blåljus i samverkan, 2 sjukvårdstransportfordon och 2 ambulanser till Ukraina. Numera är han även Ambassadör för stiftelsen.",
               image: "/Janne_ukraina.jpg",
               link: "https://blaljusisamverkan.se/"
             },
