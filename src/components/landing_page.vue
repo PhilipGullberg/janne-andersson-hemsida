@@ -284,7 +284,7 @@
            
             <div class="aspect-w-4 aspect-h-3">
               <img loading="lazy" 
-                src="https://lidingoforsamling.se/wp-content/uploads/foredrag-janne-andersson.jpg"
+                src="/Föreläsning_4.jpg"
                 alt="Föreläsning Bild 4"
                 class="rounded-lg shadow-lg object-cover"
               />
@@ -688,12 +688,13 @@ export default {
           title: "Uppdrag och Produktioner",
           readMore: "Läs mer",
           engagementcards: [
+           
             {
-              title:"Hjärtuppropet",
-              logo:"/logga_hjart.png",
-              description: "Ambassadör för Hjärtuppropet, där han arbetar för att öka kunskapen om hjärt-lungräddning och hjärtstartare.",
-              image: "https://www.hjartuppropet.se/wp-content/uploads/2024/12/Janne-Andersson-13-683x1024.jpg",
-              link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
+              title:"Svenska Bordtennisförbundet",
+              logo:"/SBTF_logga.webp",
+              description: "Ledarskapskonsult för Svenska Bordtennisförbundet, där han fokuserar på att stärka ledarskapet inom förbundet.",
+              image: "/Janne_bordtennis.webp",
+              link: "https://sbtf.se/forbundet/starkt-ledarskap-fokus-i-ny-organisation/"
             },
             {
               logo:"/barncancerfonden_logga.jfif",
@@ -715,6 +716,13 @@ export default {
               description: "Janne körde tillsammans med representanter för Blåljus i samverkan, 2 sjukvårdstransportfordon och 2 ambulanser till Ukraina. Numera är han även Ambassadör för stiftelsen.",
               image: "/Janne_ukraina.jpg",
               link: "https://blaljusisamverkan.se/"
+            },
+             {
+              title:"Hjärtuppropet",
+              logo:"/logga_hjart.png",
+              description: "Ambassadör för Hjärtuppropet, där han arbetar för att öka kunskapen om hjärt-lungräddning och hjärtstartare.",
+              image: "https://www.hjartuppropet.se/wp-content/uploads/2024/12/Janne-Andersson-13-683x1024.jpg",
+              link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
             },
           ],
           cards: [
