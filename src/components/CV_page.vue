@@ -389,7 +389,6 @@
                 bullets: [
                   "Led Sweden to the 2018 World Cup quarterfinals against England.",
                   "94 international matches as head coach – the most in Swedish history.",
-                  "Most 'allsvenska' matches in the club's history as Head Coach.",
                 ],
               },
               job2: {
@@ -406,6 +405,7 @@
                 bullets: [
                   "Second place in Allsvenskan 2004.",
                   "Victory over Sporting CP in the 2005 UEFA Cup.",
+                    "Most 'allsvenska' matches in the club's history as Head Coach."
                 ],
               },
             },
@@ -415,7 +415,7 @@
               uefaProTitle: "UEFA Pro License",
               uefaProDate: "2008 – 2010",
               uniTitle: "University of Sport Education",
-              uniDate: "1968 – 1971",
+              uniDate: "1984 – 1986",
               certTitle: "Certified Board member from 'Styrelseakademien'",
               certDate: "2024",
             },
