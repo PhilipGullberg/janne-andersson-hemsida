@@ -721,7 +721,7 @@ export default {
               title:"Hjärtuppropet",
               logo:"/logga_hjart.png",
               description: "Ambassadör för Hjärtuppropet, där han arbetar för att öka kunskapen om hjärt-lungräddning och hjärtstartare.",
-              image: "https://www.hjartuppropet.se/wp-content/uploads/2024/12/Janne-Andersson-13-683x1024.jpg",
+              image: "/ambassadorer.webp",
               link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
             },
           ],
