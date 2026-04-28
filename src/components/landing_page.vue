@@ -73,6 +73,7 @@
           <a href="#about" class="hover:underline text-gray-700">{{ currentText.navAbout }}</a>
           <a href="#föreläsningar" class="hover:underline text-gray-700">{{ currentText.navLectures }}</a>
           <a href="#engagemang" class="hover:underline text-gray-700">{{ currentText.navEngagemang }}</a>
+          <a href="#books" class="hover:underline text-gray-700">{{ currentText.navBooks }}</a>
           <a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a>
           <a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a>
           <a
@@ -130,6 +131,7 @@
           <li><a href="#about" class="hover:underline text-gray-700">{{ currentText.navAbout }}</a></li>
           <li><a href="#föreläsningar" class="hover:underline text-gray-700">{{ currentText.navLectures }}</a></li>
           <li><a href="#engagemang" class="hover:underline text-gray-700">{{ currentText.navEngagemang }}</a></li>
+          <li><a href="#books" class="hover:underline text-gray-700">{{ currentText.navBooks }}</a></li>
           <li><a href="#uppdrag" class="hover:underline text-gray-700">{{ currentText.navAssignments }}</a></li>
           <li><a href="#utmärkelser" class="hover:underline text-gray-700">{{ currentText.navAwards }}</a></li>
           <li>
@@ -171,6 +173,43 @@
             style="object-position:20% 50%;"
             class="rounded-lg shadow-lg object-cover w-[400px] h-[500px]"
           />
+        </div>
+      </section>
+
+      <section class="bg-[#124E66] px-6 py-6 text-white lg:px-24" v-fade-in>
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 md:flex-row md:gap-8">
+          <img loading="lazy"
+            :src="currentText.newBookBanner.image"
+            :alt="currentText.newBookBanner.imageAlt"
+            class="h-28 w-20 rounded-md object-cover shadow-xl md:h-32 md:w-24"
+          />
+          <div class="flex-1 text-center md:text-left">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/70">
+              {{ currentText.newBookBanner.eyebrow }}
+            </p>
+            <h2 class="mt-1 text-2xl font-bold leading-tight md:text-3xl">
+              {{ currentText.newBookBanner.title }}
+            </h2>
+            <p class="mt-2 text-sm leading-relaxed text-white/85 md:text-base">
+              {{ currentText.newBookBanner.description }}
+            </p>
+          </div>
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a
+              href="#books"
+              class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#124E66] shadow-md transition duration-300 hover:bg-gray-100"
+            >
+              {{ currentText.newBookBanner.primaryCta }}
+            </a>
+            <a
+              :href="currentText.newBookBanner.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-white/10"
+            >
+              {{ currentText.newBookBanner.secondaryCta }}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -333,32 +372,98 @@
         </div>
       </section>
 
-  <section id="book" class="py-16 px-6 lg:px-24 bg-gradient-to-r from-[#124E66] to-[#124E66] text-white md:px-12 " v-fade-in>
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
-    <div class="md:w-1/2 sm:w-full self-center">
-      <img loading="lazy" 
-        src="https://bilder.akademibokhandeln.se/images_akb/9789171265302_383/att-bygga-ett-lag"
-        alt="Bokens omslag"
-        class="rounded-lg shadow-2xl object-cover md:w-3/4 sm:w-3/5"
-      />
-    </div>
-    <div class="md:w-1/2 sm:w-full">
-      <h2 class="text-4xl font-extrabold mb-4">
-        {{ currentText.bookSection.title }}
-      </h2>
-      <p class="text-lg mb-6">
-        {{ currentText.bookSection.description }}
-        
-      </p>
-      <blockquote class="border-l-4 border-white pl-4 italic text-xl">
-        "{{ currentText.bookSection.quote }}"
-        
-      </blockquote>
-      <a target="_blank"
-            class="px-4 flex items-center w-[150px] justify-between py-2 bg-white text-[#124E66] font-semibold text-lg rounded-lg shadow-lg hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition duration-200 mt-8" href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302">{{ currentText.bookSection.CTA }}</a>
-    </div>
-  </div>
-</section>
+      <section id="books" class="bg-[#124E66] px-6 py-24 lg:px-24" v-fade-in>
+        <div class="mx-auto max-w-8xl">
+          <div class="mb-20 text-center">
+            <p class="text-base font-semibold uppercase tracking-[0.24em] text-white/70">
+              {{ currentText.booksEyebrow }}
+            </p>
+            <h2 class="mt-4 text-5xl font-bold text-white">
+              {{ currentText.booksTitle }}
+            </h2>
+          </div>
+
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            <!-- First Book -->
+            <div class="flex items-center gap-10 flex-1">
+              <div class="relative">
+                <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 flex-shrink-0 w-48 md:w-64">
+                  <img loading="lazy"
+                    :src="currentText.newBookSection.image"
+                    :alt="currentText.newBookSection.imageAlt"
+                    class="w-full h-auto object-cover"
+                  />
+                </div>
+                <div class="absolute -top-5 -right-5 bg-white text-[#124E66] px-3 py-2 rounded-full shadow-lg font-bold text-xs tracking-widest border-2 border-[#124E66] flex items-center gap-1.5">
+                  <span class="text-xl">★</span>
+                  <span class="text-xs">NY BOK</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold uppercase tracking-[0.24em] text-white/70 mb-3">
+                  {{ currentText.newBookSection.eyebrow }}
+                </p>
+                <h3 class="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
+                  {{ currentText.newBookSection.title }}
+                </h3>
+                <p class="text-base md:text-lg leading-relaxed text-white/90 mb-4">
+                  {{ currentText.newBookSection.description }}
+                </p>
+                <p class="text-base md:text-lg leading-relaxed text-white/90 mb-5">
+                  {{ currentText.newBookSection.details }}
+                </p>
+                <div class="rounded-lg border-l-4 border-white bg-white/10 px-5 py-4 mb-5">
+                  <p class="text-base font-medium leading-relaxed text-white/90">
+                    {{ currentText.newBookSection.highlight }}
+                  </p>
+                </div>
+                <a
+                  :href="currentText.newBookSection.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-[#124E66] shadow-md transition duration-300 hover:bg-gray-100"
+                >
+                  {{ currentText.newBookSection.primaryCta }}
+                </a>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="hidden lg:block w-px h-[420px] bg-white/30"></div>
+
+            <!-- Second Book -->
+            <div class="flex items-center gap-10 flex-1 lg:flex-row-reverse">
+              <div class="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 flex-shrink-0 w-48 md:w-64">
+                <img loading="lazy" 
+                  src="https://bilder.akademibokhandeln.se/images_akb/9789171265302_383/att-bygga-ett-lag"
+                  alt="Bokens omslag"
+                  class="w-full h-auto object-cover"
+                />
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold uppercase tracking-[0.24em] text-white/70 mb-3">
+                  {{ currentText.bookSection.eyebrow }}
+                </p>
+                <h3 class="text-3xl md:text-4xl font-bold leading-tight text-white mb-4">
+                  {{ currentText.bookSection.title }}
+                </h3>
+                <p class="text-base md:text-lg leading-relaxed text-white/90 mb-5">
+                  {{ currentText.bookSection.description }}
+                </p>
+                <blockquote class="border-l-4 border-white pl-5 text-base md:text-lg italic leading-relaxed text-white/90 mb-5">
+                  "{{ currentText.bookSection.quote }}"
+                </blockquote>
+                <a target="_blank"
+                  class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-[#124E66] shadow-md transition duration-300 hover:bg-gray-100"
+                  href="https://www.akademibokhandeln.se/bok/att-bygga-ett-lag/9789171265302"
+                >
+                  {{ currentText.bookSection.CTA }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- LinkedIn Section -->
       <section class="bg-gray-50 py-16 px-6 lg:px-8" v-fade-in>
@@ -633,7 +738,7 @@
       <!-- Footer -->
       <footer class="bg-gray-100 text-gray-700 text-center py-6">
         <p>
-          &copy; 2025 {{ currentText.footerName }}.
+          &copy; {{ currentYear }} {{ currentText.footerName }}.
           {{ currentText.footerRights }}
         </p>
       </footer>
@@ -677,7 +782,36 @@ export default {
         iconClass: "fas fa-chalkboard-teacher"
       }
     ],
+          newBookBanner: {
+            eyebrow: "Ny bok",
+            title: "Köp Jannes nya bok nu",
+            description:
+              "En personlig inblick i tiden som förbundskapten, med reflektioner, känslor och tankar från 7,5 år nära landslaget.",
+            primaryCta: "Läs mer om boken",
+            secondaryCta: "Köp på Adlibris",
+            image: "https://media.adlibris.com/images/9789190085578/da-var-da-janne-anderssons-dagbok-som-forbundskapten.jpg",
+            imageAlt: "Omslag till Janne Anderssons nya bok",
+            link: "https://www.adlibris.com/sv/bok/da-var-da-janne-anderssons-dagbok-som-forbundskapten-9789190085578?campaignId=fb75b556-d1dc-43f8-b458-aa07e44f9353",
+          },
+          newBookSection: {
+            eyebrow: "Jannes nya bok",
+            title: "Då var då",
+            description:
+              "Boken är en typ av dagbok över sin förbundskaptenstid som Janne skrivit tillsammans med Henrik Johnsson.",
+            details:
+              "Intressant skildring av Jannes tankar, känslor, reflektioner och funderingar under 7,5 år.",
+            highlight:
+              "En nära berättelse från åren som förbundskapten, med både det som syntes utåt och det som pågick bakom kulisserna.",
+            primaryCta: "Köp boken",
+            secondaryCta: "Se den andra boken",
+            image: "https://media.adlibris.com/images/9789190085578/da-var-da-janne-anderssons-dagbok-som-forbundskapten.jpg",
+            imageAlt: "Omslag till boken Då var då",
+            link: "https://www.adlibris.com/sv/bok/da-var-da-janne-anderssons-dagbok-som-forbundskapten-9789190085578?campaignId=fb75b556-d1dc-43f8-b458-aa07e44f9353",
+          },
+          booksEyebrow: "B\u00f6cker",
+          booksTitle: "Jannes b\u00f6cker",
           bookSection: {
+          eyebrow: "Ledarskap",
           title: "En handbok för ledare",
           description: "Denna bok ger en djupgående inblick i ledarskap med inspirerande berättelser och praktiska exempel. Varje kapitel är utformat för att vara både informativt och engagerande.",
           quote: "En bok som alla som jobbar med någon form av ledarskap bör läsa. En handbok i hur man får människor att trivas och prestera.",
@@ -860,6 +994,7 @@ export default {
           navAbout: "Om Janne",
           navLectures: "Föreläsningar",
           navEngagemang: "Engagemang",
+          navBooks: "B\u00f6cker",
           navAssignments: "Uppdrag",
           navAwards: "Utmärkelser",
           navContact: "Kontakt",
@@ -943,7 +1078,36 @@ export default {
         iconClass: "fas fa-chalkboard-teacher"
       }
     ],
+          newBookBanner: {
+            eyebrow: "New book",
+            title: "Buy Janne's new book now",
+            description:
+              "A personal look at the years as national team head coach, filled with reflections, emotions, and thoughts from 7.5 years close to the team.",
+            primaryCta: "Read more about the book",
+            secondaryCta: "Buy on Adlibris",
+            image: "https://media.adlibris.com/images/9789190085578/da-var-da-janne-anderssons-dagbok-som-forbundskapten.jpg",
+            imageAlt: "Cover of Janne Andersson's new book",
+            link: "https://www.adlibris.com/sv/bok/da-var-da-janne-anderssons-dagbok-som-forbundskapten-9789190085578?campaignId=fb75b556-d1dc-43f8-b458-aa07e44f9353",
+          },
+          newBookSection: {
+            eyebrow: "Janne's new book",
+            title: "Då var då",
+            description:
+              "The book works like a diary from Janne's time as head coach, written together with Henrik Johnsson.",
+            details:
+              "It offers an engaging portrayal of Janne's thoughts, emotions, reflections, and questions during 7.5 years in charge.",
+            highlight:
+              "A close account of the national team years, including both the public moments and what was happening behind the scenes.",
+            primaryCta: "Buy the book on Adlibris",
+            secondaryCta: "See the other book",
+            image: "https://media.adlibris.com/images/9789190085578/da-var-da-janne-anderssons-dagbok-som-forbundskapten.jpg",
+            imageAlt: "Cover of the book Då var då",
+            link: "https://www.adlibris.com/sv/bok/da-var-da-janne-anderssons-dagbok-som-forbundskapten-9789190085578?campaignId=fb75b556-d1dc-43f8-b458-aa07e44f9353",
+          },
+          booksEyebrow: "Books",
+          booksTitle: "Janne's books",
           bookSection: {
+        eyebrow: "Leadership",
         title: "A handbook for leadarship",
         description: "This book offers an in-depth look at leadership with inspiring stories and practical examples. Each chapter is designed to be both informative and engaging.",
         quote: "A book that everyone who works with any form of leadership should read. A handbook on how to make people thrive and perform.",
@@ -1101,6 +1265,7 @@ export default {
           /* --- NAVIGATION --- */
           navAbout: "About Janne",
           navLectures: "Lectures",
+          navBooks: "Books",
           navAssignments: "Assignments",
           navAwards: "Awards",
           navContact: "Contact",
@@ -1177,6 +1342,9 @@ export default {
     currentText() {
       return this.textContent[this.currentLanguage];
     },
+    currentYear() {
+      return new Date().getFullYear();
+    },
   },
 
   mounted() {
@@ -1246,3 +1414,5 @@ export default {
   animation: fade-in 1.2s ease-in-out;
 }
 </style>
+
+
