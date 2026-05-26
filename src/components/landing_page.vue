@@ -61,7 +61,7 @@
             class="flex items-center space-x-2 px-4 py-2 border rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
           >
             <img loading="lazy" 
-              src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+              src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
               alt="English Flag"
               class="w-6 h-6"
             />
@@ -111,7 +111,7 @@
               class="flex items-center space-x-2 px-2 py-1 border rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
             >
               <img loading="lazy" 
-                src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
                 alt="English Flag"
                 class="w-6 h-6"
               />
