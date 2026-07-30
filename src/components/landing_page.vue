@@ -356,7 +356,7 @@
           </p> -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         <div v-for="(card, index) in currentText.engagementcards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-80 object-cover " />
+          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-70 object-cover " />
           <div class="p-6">
             <div class="flex gap-4 mb-4">
             <img :src=card.logo alt="Logo" class="w-14 h-14 mb-4" />
