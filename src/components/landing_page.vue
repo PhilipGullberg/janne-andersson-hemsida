@@ -354,21 +354,27 @@
           <!-- <p class="text-l text-gray-700 text-center mb-8">
             {{ currentText.engagementsDescription }}
           </p> -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        <div v-for="(card, index) in currentText.engagementcards" :key="index" class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img loading="lazy"  :src="card.image" :alt="card.title" style="object-position:50% 20%;" class="w-full h-80 object-cover " />
-          <div class="p-6">
-            <div class="flex gap-4 mb-4">
-            <img :src=card.logo alt="Logo" class="w-14 h-14 mb-4" />
-            <h3 class="text-2xl font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+            <div
+              v-for="(card, index) in currentText.engagementcards"
+              :key="index"
+              class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-200"
+            >
+              <div class="w-full aspect-[4/3] overflow-hidden">
+                <img loading="lazy" :src="card.image" :alt="card.title" class="w-full h-full object-cover" :style="{ objectPosition: card.objectPosition || '50% 25%' }" />
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <img :src="card.logo" :alt="card.title" class="w-10 h-10 object-contain flex-shrink-0" />
+                  <h3 class="text-base font-semibold text-gray-900 leading-tight">{{ card.title }}</h3>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed flex-1">{{ card.description }}</p>
+                <a :href="card.link" target="_blank" class="mt-4 inline-flex items-center text-[#124E66] text-sm font-medium hover:underline">
+                  {{ currentText.readMore }} &rarr;
+                </a>
+              </div>
+            </div>
           </div>
-            <p class="text-gray-700 mb-4">{{ card.description }}</p>
-            <a :href="card.link" target="_blank" class="text-[#124E66] font-medium hover:underline">
-              {{ currentText.readMore }}
-            </a>
-          </div>
-        </div>
-      </div>
         </div>
       </section>
 
@@ -822,40 +828,44 @@ export default {
           title: "Uppdrag och Produktioner",
           readMore: "Läs mer",
           engagementcards: [
-           
             {
-              title:"Svenska Bordtennisförbundet",
-              logo:"/SBTF_logga.webp",
+              title: "Svenska Bordtennisförbundet",
+              logo: "/SBTF_logga.webp",
               description: "Ledarskapskonsult för Svenska Bordtennisförbundet, där han fokuserar på att stärka ledarskapet inom förbundet.",
               image: "/Janne_bordtennis.webp",
+              objectPosition: "50% 20%",
               link: "https://sbtf.se/forbundet/starkt-ledarskap-fokus-i-ny-organisation/"
             },
             {
-              logo:"/barncancerfonden_logga.jfif",
+              logo: "/barncancerfonden_logga.jfif",
               title: "Barncancerfonden",
               description: "Janne är Ambassadör för Barncancerfonden. Han arbetar bla med projektet #Fotbollströjefredag där han är Förbundskapten för barncancerfondens lag.",
               image: "/bcf_bild.png",
+              objectPosition: "50% 10%",
               link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
             },
             {
-              logo:"/craft_logga.png",
+              logo: "/craft_logga.png",
               title: "Craft Sportswear",
               description: "Janne är styrelseledamot i företaget och bidrar med sin erfarenhet inom sport och ledarskap.",
               image: "/janne_craft.jpg",
+              objectPosition: "50% 30%",
               link: "https://www.nwg.se/press/janne-andersson-forstarker-crafts-styrelse/"
             },
             {
-              logo:"/blaljusisamverkan-logo.png",
+              logo: "/blaljusisamverkan-logo.png",
               title: "Insamlingsstiftelsen Blåljus i samverkan",
               description: "Janne körde tillsammans med representanter för Blåljus i samverkan, 2 sjukvårdstransportfordon och 2 ambulanser till Ukraina. Numera är han även Ambassadör för stiftelsen.",
               image: "/Janne_ukraina.jpg",
+              objectPosition: "50% 40%",
               link: "https://blaljusisamverkan.se/"
             },
-             {
-              title:"Hjärtuppropet",
-              logo:"/logga_hjart.png",
+            {
+              title: "Hjärtuppropet",
+              logo: "/logga_hjart.png",
               description: "Ambassadör för Hjärtuppropet, där han arbetar för att öka kunskapen om hjärt-lungräddning och hjärtstartare.",
               image: "/hjärtuppropet.jpg",
+              objectPosition: "50% 20%",
               link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
             },
           ],
@@ -893,7 +903,7 @@ export default {
 {
   "title": "Sommar i P1",
   "description": "Janne Andersson var sommarpratare i 'Sommar i P1', där han berättade om sin karriär, uppväxt och personliga insikter från fotbollen.",
-  "image": "https://tse1.mm.bing.net/th?id=OIP.uUAJv2tF_M2dellCC9HF5gHaEK&pid=Api",
+  "image": "https://image-api.sr.se/v1/static/AA/2071/4e5f9bb1-9059-4e2d-aec5-1e714e54e2d2.jpg?w=1024&h=576&q=75",
   "link": "https://www.sverigesradio.se/avsnitt/janne-andersson"
 }
           ],
@@ -1163,7 +1173,7 @@ export default {
 {
   "title": "Sommar i P1",
   "description": "Janne Andersson was a guest on 'Sommar i P1', where he shared insights about his career, upbringing, and personal experiences in football.",
-  "image": "https://tse1.mm.bing.net/th?id=OIP.uUAJv2tF_M2dellCC9HF5gHaEK&pid=Api",
+  "image": "https://image-api.sr.se/v1/static/AA/2071/4e5f9bb1-9059-4e2d-aec5-1e714e54e2d2.jpg?w=1024&h=576&q=75",
   "link": "https://www.sverigesradio.se/avsnitt/janne-andersson"
 }
 
@@ -1297,6 +1307,52 @@ export default {
           linkedInTitle: "On LinkedIn, Janne posts updates about his current work",
           linkedInButton: "Follow Janne on LinkedIn",
           linkedInReadMore: "Read more",
+
+          /* --- ENGAGEMANG --- */
+          navEngagemang: "Commitments",
+          engagementsTitle: "Commitments",
+          engagementcards: [
+            {
+              title: "Swedish Table Tennis Federation",
+              logo: "/SBTF_logga.webp",
+              description: "Leadership consultant for the Swedish Table Tennis Federation, focusing on strengthening leadership within the organisation.",
+              image: "/Janne_bordtennis.webp",
+              objectPosition: "50% 20%",
+              link: "https://sbtf.se/forbundet/starkt-ledarskap-fokus-i-ny-organisation/"
+            },
+            {
+              logo: "/barncancerfonden_logga.jfif",
+              title: "Barncancerfonden",
+              description: "Janne is an Ambassador for Barncancerfonden, working with the #Fotbollströjefredag project as head coach of their team.",
+              image: "/bcf_bild.png",
+              objectPosition: "50% 10%",
+              link: "https://www.tv4.se/artikel/1fDCl5PfEcy6unGCY6cdAS/haer-aer-janne-anderssons-nya-foerbundskaptensuppdrag"
+            },
+            {
+              logo: "/craft_logga.png",
+              title: "Craft Sportswear",
+              description: "Janne serves on the board of directors, contributing his experience in sport and leadership.",
+              image: "/janne_craft.jpg",
+              objectPosition: "50% 30%",
+              link: "https://www.nwg.se/press/janne-andersson-forstarker-crafts-styrelse/"
+            },
+            {
+              logo: "/blaljusisamverkan-logo.png",
+              title: "Blåljus i samverkan Foundation",
+              description: "Janne drove two medical transport vehicles and two ambulances to Ukraine together with Blåljus i samverkan. He is now also an Ambassador for the foundation.",
+              image: "/Janne_ukraina.jpg",
+              objectPosition: "50% 40%",
+              link: "https://blaljusisamverkan.se/"
+            },
+            {
+              title: "Hjärtuppropet",
+              logo: "/logga_hjart.png",
+              description: "Ambassador for Hjärtuppropet, working to increase public knowledge about CPR and defibrillators.",
+              image: "/hjärtuppropet.jpg",
+              objectPosition: "50% 20%",
+              link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
+            },
+          ],
 
           /* --- ASSIGNMENTS --- */
           assignmentsTitle: "Assignments & Productions",
