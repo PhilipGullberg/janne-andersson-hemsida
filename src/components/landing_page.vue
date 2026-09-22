@@ -868,6 +868,14 @@ export default {
               objectPosition: "50% 20%",
               link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
             },
+            {
+              title: "UNICEF",
+              logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/UNICEF_Logo_%28cropped%29.png",
+              description: "Som UNICEF-ambassadör reste Janne till Botswana för att uppmärksamma barns rättigheter och levnadsvillkor.",
+              image: "https://tse4.mm.bing.net/th?id=OIP.agwgT7zEebl9EUzGQamfGAHaEK&pid=Api",
+              objectPosition: "50% 25%",
+              link: "https://www.youtube.com/watch?v=L_vNFAMNNMI"
+            },
           ],
           cards: [
             {
@@ -879,7 +887,7 @@ export default {
             {
               title: "Skavlan",
               description: "Gästade 'Skavlan' och diskuterade ledarskap, pressen inom elitfotboll och personliga insikter.",
-              image: "https://idrottensaffarer.se/files/imagecache/100_proc/story_image/svt-skavlan-2017-e10-7d27.jpg",
+              image: "/skavlan.jpg",
               link: "https://www.svtplay.se/video/KqWpr53/skavlan/janne-andersson-och-gunde-och-ferry-svan-bland-gasterna"
             },
             {
@@ -895,12 +903,12 @@ export default {
               link: "https://www.svtplay.se/bast-i-test"
             },
             {
-  "title": "UNICEF",
-  "description": "Som UNICEF-ambassadör reste Janne till Botswana för att uppmärksamma barns rättigheter och levnadsvillkor.",
-  "image": "https://tse4.mm.bing.net/th?id=OIP.agwgT7zEebl9EUzGQamfGAHaEK&pid=Api",
-  "link": "https://www.youtube.com/watch?v=L_vNFAMNNMI"
-},
-{
+              title: "Hela Kändis-Sverige Bakar",
+              description: "Deltog i 'Hela Kändis-Sverige Bakar' med Agneta Sjödin.",
+              image: "/hksb.jpg",
+              link: "https://www.tv4play.se/program/fb21a6d306a2e8ea77b1/hela-kandis-sverige-bakar"
+            },
+            {
   "title": "Sommar i P1",
   "description": "Janne Andersson var sommarpratare i 'Sommar i P1', där han berättade om sin karriär, uppväxt och personliga insikter från fotbollen.",
   "image": "https://image-api.sr.se/v1/static/AA/2071/4e5f9bb1-9059-4e2d-aec5-1e714e54e2d2.jpg?w=1024&h=576&q=75",
@@ -1143,7 +1151,7 @@ export default {
             {
               title: "Skavlan",
               description: "Guest on 'Skavlan' discussing leadership, the pressures of elite football, and personal insights.",
-              image: "https://idrottensaffarer.se/files/imagecache/100_proc/story_image/svt-skavlan-2017-e10-7d27.jpg",
+              image: "/skavlan.jpg",
               link: "https://www.svtplay.se/video/KqWpr53/skavlan/janne-andersson-och-gunde-och-ferry-svan-bland-gasterna"
             },
             {
@@ -1165,10 +1173,10 @@ export default {
   "link": "https://www.svtplay.se/bast-i-test"
 },
 {
-  "title": "UNICEF",
-  "description": "As a UNICEF ambassador, Janne traveled to Botswana to raise awareness about children's rights and living conditions.",
-  "image": "https://tse4.mm.bing.net/th?id=OIP.agwgT7zEebl9EUzGQamfGAHaEK&pid=Api",
-  "link": "https://www.youtube.com/watch?v=L_vNFAMNNMI"
+  "title": "Hela Kändis-Sverige Bakar",
+  "description": "Participated in 'Hela Kändis-Sverige Bakar' (Celebrity Bake Off) together with Agneta Sjödin.",
+  "image": "/hksb.jpg",
+  "link": "https://www.tv4play.se/program/fb21a6d306a2e8ea77b1/hela-kandis-sverige-bakar"
 },
 {
   "title": "Sommar i P1",
@@ -1351,6 +1359,14 @@ export default {
               image: "/hjärtuppropet.jpg",
               objectPosition: "50% 20%",
               link: "https://www.hjartuppropet.se/nyhet/hjartuppropet-utser-janne-andersson-till-ny-ambassador-efter-svennis/"
+            },
+            {
+              title: "UNICEF",
+              logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/UNICEF_Logo_%28cropped%29.png",
+              description: "As a UNICEF ambassador, Janne traveled to Botswana to raise awareness about children's rights and living conditions.",
+              image: "https://tse4.mm.bing.net/th?id=OIP.agwgT7zEebl9EUzGQamfGAHaEK&pid=Api",
+              objectPosition: "50% 25%",
+              link: "https://www.youtube.com/watch?v=L_vNFAMNNMI"
             },
           ],
 
